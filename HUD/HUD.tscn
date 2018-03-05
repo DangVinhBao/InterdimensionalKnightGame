@@ -1,0 +1,204 @@
+[gd_scene load_steps=9 format=1]
+
+[ext_resource path="res://sprites/button_pause.png" type="Texture" id=1]
+[ext_resource path="res://sprites/black_background.png" type="Texture" id=2]
+[ext_resource path="res://sprites/button_resume.png" type="Texture" id=3]
+
+[sub_resource type="GDScript" id=1]
+
+resource/name = "btn_pause.gd"
+script/source = "extends TextureButton
+
+func _ready():
+	connect(\"pressed\", self, \"_on_pressed\")
+#	save_game.hide()
+	pass
+
+func _on_pressed():
+	get_tree().set_pause(true)
+	game.emit_signal(\"pause_pressed\")
+#	save_game.show()
+#	get_tree().change_scene(\"res://Menu/ui.tscn\")"
+
+[sub_resource type="GDScript" id=4]
+
+script/source = "extends Button
+
+onready var Save = get_node('/root/Save')
+
+func _on_SaveButton_pressed():
+	Save.save_game()
+"
+
+[sub_resource type="GDScript" id=5]
+
+script/source = "extends Button
+
+#onready var Save = get_node('/root/Save')
+
+func _on_LoadButton_pressed():
+	get_tree().change_scene(\"res://Stages/BaoWorld.tscn\")
+#	Save.load_game()"
+
+[sub_resource type="GDScript" id=2]
+
+resource/name = "cntr_pause.gd"
+script/source = "# script: cntr_pause (built-in)
+extends Container
+
+onready var Save = get_node('/root/Save')
+
+func _ready():
+	hide()
+	game.connect(\"pause_pressed\", self, \"_on_pause\")
+	game.connect(\"resume_pressed\", self,\"_on_resume\")
+	pass
+
+func _on_pause():
+	show()
+	pass
+
+func _on_resume():
+	hide()
+	pass
+
+
+"
+
+[sub_resource type="GDScript" id=3]
+
+script/source = "# script: btn_resume (built-in)
+
+extends TextureButton
+
+func _ready():
+	connect(\"pressed\", self, \"_on_pressed\")
+	pass
+
+func _on_pressed():
+	get_tree().set_pause(false)
+	game.emit_signal(\"resume_pressed\")
+	pass
+
+"
+
+[node name="HUD" type="CanvasLayer"]
+
+layer = 1
+offset = Vector2( 0, 0 )
+rotation = 0.0
+scale = Vector2( 1, 1 )
+
+[node name="Control" type="Control" parent="."]
+
+focus/ignore_mouse = false
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 2
+margin/left = 0.0
+margin/top = 0.0
+margin/right = 40.0
+margin/bottom = 40.0
+
+[node name="btn_pause" type="TextureButton" parent="Control"]
+
+focus/ignore_mouse = false
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 2
+margin/left = 80.0
+margin/top = 60.0
+margin/right = 144.0
+margin/bottom = 124.0
+toggle_mode = false
+enabled_focus_mode = 2
+shortcut = null
+textures/normal = ExtResource( 1 )
+params/resize_mode = 1
+params/stretch_mode = 0
+script/script = SubResource( 1 )
+
+[node name="SaveButton" type="Button" parent="Control"]
+
+focus/ignore_mouse = false
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 2
+margin/left = 50.0
+margin/top = 130.0
+margin/right = 188.0
+margin/bottom = 177.0
+toggle_mode = false
+enabled_focus_mode = 2
+shortcut = null
+text = "SAVE GAME"
+flat = false
+script/script = SubResource( 4 )
+
+[node name="LoadButton" type="Button" parent="Control"]
+
+focus/ignore_mouse = false
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 2
+margin/left = 50.0
+margin/top = 190.0
+margin/right = 188.0
+margin/bottom = 238.0
+toggle_mode = false
+enabled_focus_mode = 2
+shortcut = null
+text = "LOAD GAME"
+flat = false
+script/script = SubResource( 5 )
+
+[node name="cntr_pause" type="Container" parent="Control"]
+
+focus/ignore_mouse = false
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 2
+margin/left = 0.0
+margin/top = 0.0
+margin/right = 1024.0
+margin/bottom = 600.0
+script/script = SubResource( 2 )
+
+[node name="tex_background" type="TextureFrame" parent="Control/cntr_pause"]
+
+visibility/self_opacity = 0.35
+focus/ignore_mouse = true
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 2
+margin/left = 0.0
+margin/top = 0.0
+margin/right = 1068.0
+margin/bottom = 600.0
+texture = ExtResource( 2 )
+stretch_mode = 0
+
+[node name="btn_resume" type="TextureButton" parent="Control/cntr_pause"]
+
+process/pause_mode = 2
+focus/ignore_mouse = false
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 2
+margin/left = 80.0
+margin/top = 60.0
+margin/right = 144.0
+margin/bottom = 124.0
+toggle_mode = false
+enabled_focus_mode = 2
+shortcut = null
+textures/normal = ExtResource( 3 )
+params/resize_mode = 1
+params/stretch_mode = 0
+script/script = SubResource( 3 )
+
+[connection signal="pressed" from="Control/SaveButton" to="Control/SaveButton" method="_on_SaveButton_pressed"]
+
+[connection signal="pressed" from="Control/LoadButton" to="Control/LoadButton" method="_on_LoadButton_pressed"]
+
+
