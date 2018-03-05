@@ -24,12 +24,12 @@ var attack_time
 
 func _ready():
 	set_process(true)
-	ground_dt.add_exception(self)
 	wall_dt.add_exception(self)
 	bound_dt_1.add_exception(self)
 	bound_dt_2.add_exception(self)
 	player_dt.add_exception(self)
 	attack_dt.add_exception(self)
+	ground_dt.add_exception(self)
 	
 	player_dt.set_cast_to(Vector2(DETECTION_RANGE, 0))
 	attack_dt.set_cast_to(Vector2(ATTACK_RANGE, 0))
@@ -65,6 +65,8 @@ func ground_check():
 		var body = ground_dt.get_collider()
 		if body.is_in_group("GROUND"):
 			return true
+		elif body.is_in_group("WALL"):
+			ground_dt.add_exception(body)
 	else:
 		return false
 	pass
