@@ -4,7 +4,7 @@ signal pause_pressed
 signal resume_pressed
 
 
-onready var hud_scene = preload("res://Hud/HUD.tscn")
+onready var hud_scene = preload("res://HUD/HUD.tscn")
 #onready var ui = preload("res://Menu/ui.tscn")
 
 func _ready():
