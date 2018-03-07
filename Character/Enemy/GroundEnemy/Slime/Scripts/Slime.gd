@@ -50,6 +50,8 @@ func take_damage(damage, direction, push_back_force):
 	if anim.get_current_animation() == STATE.ATTACK:
 		push_back_force = Vector2(0,0)
 	else:
+		## EXIT
+		# ANY STATE -> HURT
 		state_machine.push_state(STATE.HURT)
 		run_anim()
 	.take_damage(damage, direction, push_back_force)

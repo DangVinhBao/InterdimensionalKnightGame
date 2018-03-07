@@ -46,7 +46,7 @@ tracks/1/keys = {
 [sub_resource type="Animation" id=5]
 
 length = 0.4
-loop = true
+loop = false
 step = 0.1
 tracks/0/type = "value"
 tracks/0/path = NodePath("../particle 1:config/emitting")
@@ -157,7 +157,6 @@ _update_shape_index = 0
 
 [node name="sprite" type="Sprite" parent="flip"]
 
-editor/display_folded = true
 transform/rot = 88.0
 transform/scale = Vector2( 0.1, 0.1 )
 offset = Vector2( 7, -200 )

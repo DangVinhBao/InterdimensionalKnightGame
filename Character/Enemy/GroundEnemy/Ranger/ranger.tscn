@@ -1,14 +1,13 @@
-[gd_scene load_steps=22 format=1]
+[gd_scene load_steps=21 format=1]
 
 [ext_resource path="res://Character/Enemy/GroundEnemy/Ranger/Scripts/Ranger.gd" type="Script" id=1]
 [ext_resource path="res://Character/Enemy/etc/alert_sign.tscn" type="PackedScene" id=2]
-[ext_resource path="res://Character/Enemy/GroundEnemy/Ranger/Sprites/space_shooter_attack.png" type="Texture" id=3]
-[ext_resource path="res://Character/Enemy/GroundEnemy/Ranger/Sprites/space_shooter_guntransform.png" type="Texture" id=4]
-[ext_resource path="res://Character/Enemy/GroundEnemy/Ranger/Sprites/space_shooter_jump.png" type="Texture" id=5]
-[ext_resource path="res://Character/Enemy/GroundEnemy/Ranger/Sprites/space_shooter_death.png" type="Texture" id=6]
-[ext_resource path="res://Character/Enemy/GroundEnemy/Ranger/Sprites/space_shooter_idle.png" type="Texture" id=7]
-[ext_resource path="res://Character/Enemy/GroundEnemy/Ranger/Sprites/space_shooter_run.png" type="Texture" id=8]
-[ext_resource path="res://Debuggers/enemy_debugger.tscn" type="PackedScene" id=9]
+[ext_resource path="res://Character/Enemy/GroundEnemy/Ranger/Sprites/space_shooter_transformattack.png" type="Texture" id=3]
+[ext_resource path="res://Character/Enemy/GroundEnemy/Ranger/Sprites/space_shooter_jump.png" type="Texture" id=4]
+[ext_resource path="res://Character/Enemy/GroundEnemy/Ranger/Sprites/space_shooter_death.png" type="Texture" id=5]
+[ext_resource path="res://Character/Enemy/GroundEnemy/Ranger/Sprites/space_shooter_idle.png" type="Texture" id=6]
+[ext_resource path="res://Character/Enemy/GroundEnemy/Ranger/Sprites/space_shooter_run.png" type="Texture" id=7]
+[ext_resource path="res://Debuggers/enemy_debugger.tscn" type="PackedScene" id=8]
 
 [sub_resource type="CapsuleShape2D" id=1]
 
@@ -19,11 +18,11 @@ height = 80.0
 [sub_resource type="ColorRamp" id=2]
 
 offsets = FloatArray( 0, 1 )
-colors = ColorArray( 1, 0, 0, 1, 1, 1, 0, 1 )
+colors = ColorArray( 0, 0, 1, 1, 0, 1, 1, 1 )
 
 [sub_resource type="Animation" id=3]
 
-length = 0.8
+length = 1.1
 loop = false
 step = 0.05
 tracks/0/type = "value"
@@ -31,10 +30,10 @@ tracks/0/path = NodePath(".:frame")
 tracks/0/interp = 1
 tracks/0/imported = false
 tracks/0/keys = {
-"times": FloatArray( 0, 0.15, 0.25, 0.4, 0.8 ),
-"transitions": FloatArray( 1, 0, 0, 1, 1 ),
+"times": FloatArray( 0, 0.15, 0.25, 0.8, 0.9, 1.1 ),
+"transitions": FloatArray( 1, 0, 1, 0, 1, 0 ),
 "update": 0,
-"values": [ 0, 2, 0, 0, 8 ]
+"values": [ 0, 2, 3, 10, 2, 0 ]
 }
 tracks/1/type = "method"
 tracks/1/path = NodePath("../..")
@@ -50,23 +49,33 @@ tracks/1/keys = {
 }
 tracks/2/type = "value"
 tracks/2/path = NodePath(".:texture")
-tracks/2/interp = 1
+tracks/2/interp = 0
 tracks/2/imported = false
 tracks/2/keys = {
-"times": FloatArray( 0, 0.25 ),
-"transitions": FloatArray( 0, 1 ),
+"times": FloatArray( 0 ),
+"transitions": FloatArray( 0 ),
 "update": 1,
-"values": [ ExtResource( 4 ), ExtResource( 3 ) ]
+"values": [ ExtResource( 3 ) ]
 }
 tracks/3/type = "value"
 tracks/3/path = NodePath(".:hframes")
-tracks/3/interp = 1
+tracks/3/interp = 0
 tracks/3/imported = false
 tracks/3/keys = {
-"times": FloatArray( 0, 0.25 ),
-"transitions": FloatArray( 0, 0 ),
+"times": FloatArray( 0 ),
+"transitions": FloatArray( 0 ),
 "update": 1,
-"values": [ 3, 8 ]
+"values": [ 11 ]
+}
+tracks/4/type = "value"
+tracks/4/path = NodePath(".:offset")
+tracks/4/interp = 1
+tracks/4/imported = false
+tracks/4/keys = {
+"times": FloatArray( 0.5, 0.6, 0.8 ),
+"transitions": FloatArray( 0, 0.25, 4 ),
+"update": 0,
+"values": [ Vector2( 0, -23 ), Vector2( -15, -23 ), Vector2( 0, -23 ) ]
 }
 
 [sub_resource type="Animation" id=4]
@@ -92,7 +101,7 @@ tracks/1/keys = {
 "times": FloatArray( 0 ),
 "transitions": FloatArray( 1 ),
 "update": 1,
-"values": [ ExtResource( 5 ) ]
+"values": [ ExtResource( 4 ) ]
 }
 tracks/2/type = "value"
 tracks/2/path = NodePath(".:hframes")
@@ -164,7 +173,7 @@ tracks/1/keys = {
 "times": FloatArray( 0 ),
 "transitions": FloatArray( 1 ),
 "update": 1,
-"values": [ ExtResource( 6 ) ]
+"values": [ ExtResource( 5 ) ]
 }
 tracks/2/type = "value"
 tracks/2/path = NodePath(".:hframes")
@@ -210,7 +219,7 @@ tracks/1/keys = {
 "times": FloatArray( 0 ),
 "transitions": FloatArray( 1 ),
 "update": 1,
-"values": [ ExtResource( 7 ) ]
+"values": [ ExtResource( 6 ) ]
 }
 tracks/2/type = "value"
 tracks/2/path = NodePath(".:hframes")
@@ -252,7 +261,7 @@ tracks/1/keys = {
 "times": FloatArray( 0 ),
 "transitions": FloatArray( 1 ),
 "update": 1,
-"values": [ ExtResource( 8 ) ]
+"values": [ ExtResource( 7 ) ]
 }
 tracks/2/type = "value"
 tracks/2/path = NodePath(".:hframes")
@@ -334,7 +343,7 @@ tracks/1/keys = {
 "times": FloatArray( 0 ),
 "transitions": FloatArray( 1 ),
 "update": 1,
-"values": [ ExtResource( 8 ) ]
+"values": [ ExtResource( 7 ) ]
 }
 tracks/2/type = "value"
 tracks/2/path = NodePath(".:hframes")
@@ -418,7 +427,7 @@ config/lifetime = 1.0
 config/time_scale = 3.0
 config/emitting = false
 config/process_mode = 1
-config/half_extents = Vector2( 0, 32 )
+config/half_extents = Vector2( 0, 60 )
 config/local_space = false
 params/direction = 90.0
 params/spread = 0.0
@@ -444,8 +453,7 @@ color/color_ramp = SubResource( 2 )
 transform/scale = Vector2( 3, 3 )
 texture = ExtResource( 3 )
 offset = Vector2( 0, -23 )
-hframes = 8
-frame = 4
+hframes = 11
 region_rect = Rect2( 0, 100, 300, 400 )
 
 [node name="anim" type="AnimationPlayer" parent="flip/sprite"]
@@ -548,6 +556,6 @@ cast_to = Vector2( 0, 50 )
 layer_mask = 4
 type_mask = 1
 
-[node name="enemy_debugger" parent="." instance=ExtResource( 9 )]
+[node name="enemy_debugger" parent="." instance=ExtResource( 8 )]
 
 

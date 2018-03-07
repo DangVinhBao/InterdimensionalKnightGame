@@ -52,6 +52,8 @@ func take_damage(damage, direction, push_back_force):
 	if anim.get_current_animation() == STATE.ATTACK:
 		push_back_force = Vector2(0,0)
 	else:
+		## EXIT
+		# ANY STATE -> HURT
 		state_machine.push_state(STATE.HURT)
 		run_anim()
 	
@@ -71,15 +73,12 @@ func run_anim():
 	elif current_state == STATE.PURSUIT:
 		play_loop_anim(STATE.PURSUIT)
 	elif current_state == STATE.HURT:
-		anim.stop()
 		anim.play(STATE.HURT)
 	elif current_state == STATE.ATTACK:
-		anim.stop()
 		anim.play(STATE.ATTACK)
 	elif current_state == STATE.ALERT:
 		anim.stop()
 	elif current_state == STATE.BACKOFF:
-		anim.stop()
 		anim.play("backoff")
 	pass
 

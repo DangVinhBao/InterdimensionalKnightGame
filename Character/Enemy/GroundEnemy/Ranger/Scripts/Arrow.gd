@@ -23,8 +23,8 @@ func init_variables(parent):
 func _ready():
 	set_process(true)
 	anim.play("flying")
-	flip.set_scale(Vector2(direction, 1))
-	set_pos(pivot * direction + parent.get_pos())
+	pivot.x = pivot.x * direction
+	set_pos(pivot + parent.get_pos())
 	pass
 
 func _process(delta):
