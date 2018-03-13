@@ -1,15 +1,84 @@
-[gd_resource type="TileSet" load_steps=16 format=1]
+[gd_resource type="TileSet" load_steps=88 format=1]
 
-[ext_resource path="res://sprites/box.png" type="Texture" id=1]
+[ext_resource path="res://Tilemap/tileset/tile-1.png" type="Texture" id=1]
 [ext_resource path="res://Tilemap/tileset/block-1.png" type="Texture" id=2]
-[ext_resource path="res://Tilemap/tileset/block-2.png" type="Texture" id=3]
-[ext_resource path="res://Tilemap/tileset/block-3.png" type="Texture" id=4]
-[ext_resource path="res://Tilemap/tileset/block-4.png" type="Texture" id=5]
-[ext_resource path="res://Tilemap/tileset/wall-1.png" type="Texture" id=6]
-[ext_resource path="res://Tilemap/tileset/wall-2.png" type="Texture" id=7]
-[ext_resource path="res://Tilemap/tileset/wall-3.png" type="Texture" id=8]
-[ext_resource path="res://Tilemap/tileset/window-1.png" type="Texture" id=9]
-[ext_resource path="res://Tilemap/tileset/window-2.png" type="Texture" id=10]
+[ext_resource path="res://Tilemap/tileset/tile_1-1.png" type="Texture" id=3]
+[ext_resource path="res://Tilemap/tileset/tile_1-2.png" type="Texture" id=4]
+[ext_resource path="res://Tilemap/tileset/tile_1-3.png" type="Texture" id=5]
+[ext_resource path="res://Tilemap/tileset/tile_1-4.png" type="Texture" id=6]
+[ext_resource path="res://Tilemap/tileset/tile_1-5.png" type="Texture" id=7]
+[ext_resource path="res://Tilemap/tileset/tile_1-6.png" type="Texture" id=8]
+[ext_resource path="res://Tilemap/tileset/tile_1-7.png" type="Texture" id=9]
+[ext_resource path="res://Tilemap/tileset/tile_1-8.png" type="Texture" id=10]
+[ext_resource path="res://Tilemap/tileset/tile_1-9.png" type="Texture" id=11]
+[ext_resource path="res://Tilemap/tileset/tile_2-1.png" type="Texture" id=12]
+[ext_resource path="res://Tilemap/tileset/block-2.png" type="Texture" id=13]
+[ext_resource path="res://Tilemap/tileset/tile_2-2.png" type="Texture" id=14]
+[ext_resource path="res://Tilemap/tileset/tile_2-3.png" type="Texture" id=15]
+[ext_resource path="res://Tilemap/tileset/tile_2-4.png" type="Texture" id=16]
+[ext_resource path="res://Tilemap/tileset/tile_2-5.png" type="Texture" id=17]
+[ext_resource path="res://Tilemap/tileset/tile_2-6.png" type="Texture" id=18]
+[ext_resource path="res://Tilemap/tileset/tile_2-7.png" type="Texture" id=19]
+[ext_resource path="res://Tilemap/tileset/tile_2-8.png" type="Texture" id=20]
+[ext_resource path="res://Tilemap/tileset/tile_2-9.png" type="Texture" id=21]
+[ext_resource path="res://Tilemap/tileset/Tile-3-1.png" type="Texture" id=22]
+[ext_resource path="res://Tilemap/tileset/Tile-3-2.png" type="Texture" id=23]
+[ext_resource path="res://Tilemap/tileset/block-3.png" type="Texture" id=24]
+[ext_resource path="res://Tilemap/tileset/Tile-3-3.png" type="Texture" id=25]
+[ext_resource path="res://Tilemap/tileset/Tile-3-4.png" type="Texture" id=26]
+[ext_resource path="res://Tilemap/tileset/Tile-3-5.png" type="Texture" id=27]
+[ext_resource path="res://Tilemap/tileset/Tile-3-6.png" type="Texture" id=28]
+[ext_resource path="res://Tilemap/tileset/Tile-3-7.png" type="Texture" id=29]
+[ext_resource path="res://Tilemap/tileset/Tile-3-8.png" type="Texture" id=30]
+[ext_resource path="res://Tilemap/tileset/Tile-3-9.png" type="Texture" id=31]
+[ext_resource path="res://Tilemap/tileset/Tile-4-1.png" type="Texture" id=32]
+[ext_resource path="res://Tilemap/tileset/Tile-4-2.png" type="Texture" id=33]
+[ext_resource path="res://Tilemap/tileset/Tile-4-3.png" type="Texture" id=34]
+[ext_resource path="res://Tilemap/tileset/block-4.png" type="Texture" id=35]
+[ext_resource path="res://Tilemap/tileset/Tile-4-4.png" type="Texture" id=36]
+[ext_resource path="res://Tilemap/tileset/Tile-4-5.png" type="Texture" id=37]
+[ext_resource path="res://Tilemap/tileset/Tile-4-6.png" type="Texture" id=38]
+[ext_resource path="res://Tilemap/tileset/Tile-4-7.png" type="Texture" id=39]
+[ext_resource path="res://Tilemap/tileset/Tile-4-8.png" type="Texture" id=40]
+[ext_resource path="res://Tilemap/tileset/Tile-4-9.png" type="Texture" id=41]
+[ext_resource path="res://Tilemap/tileset/Box-2-1.png" type="Texture" id=42]
+[ext_resource path="res://Tilemap/tileset/Box-2-2.png" type="Texture" id=43]
+[ext_resource path="res://Tilemap/tileset/Box-2-3.png" type="Texture" id=44]
+[ext_resource path="res://Tilemap/tileset/Box-2-4.png" type="Texture" id=45]
+[ext_resource path="res://Tilemap/tileset/wall-1.png" type="Texture" id=46]
+[ext_resource path="res://Tilemap/tileset/Box-2-5.png" type="Texture" id=47]
+[ext_resource path="res://Tilemap/tileset/Box-2-6.png" type="Texture" id=48]
+[ext_resource path="res://Tilemap/tileset/Box-2-7.png" type="Texture" id=49]
+[ext_resource path="res://Tilemap/tileset/Box-2-8.png" type="Texture" id=50]
+[ext_resource path="res://Tilemap/tileset/Box-2-9.png" type="Texture" id=51]
+[ext_resource path="res://Tilemap/tileset/Box-3-1.png" type="Texture" id=52]
+[ext_resource path="res://Tilemap/tileset/Box-3-2.png" type="Texture" id=53]
+[ext_resource path="res://Tilemap/tileset/Box-3-3.png" type="Texture" id=54]
+[ext_resource path="res://Tilemap/tileset/Box-3-4.png" type="Texture" id=55]
+[ext_resource path="res://Tilemap/tileset/Box-3-5.png" type="Texture" id=56]
+[ext_resource path="res://Tilemap/tileset/wall-2.png" type="Texture" id=57]
+[ext_resource path="res://Tilemap/tileset/Box-3-6.png" type="Texture" id=58]
+[ext_resource path="res://Tilemap/tileset/Box-3-7.png" type="Texture" id=59]
+[ext_resource path="res://Tilemap/tileset/Box-3-8.png" type="Texture" id=60]
+[ext_resource path="res://Tilemap/tileset/Box-3-9.png" type="Texture" id=61]
+[ext_resource path="res://Tilemap/tileset/tile_1-a.png" type="Texture" id=62]
+[ext_resource path="res://Tilemap/tileset/tile_1-b.png" type="Texture" id=63]
+[ext_resource path="res://Tilemap/tileset/tile_1-c.png" type="Texture" id=64]
+[ext_resource path="res://Tilemap/tileset/tile_2-a.png" type="Texture" id=65]
+[ext_resource path="res://Tilemap/tileset/tile_2-b.png" type="Texture" id=66]
+[ext_resource path="res://Tilemap/tileset/tile_2-c.png" type="Texture" id=67]
+[ext_resource path="res://Tilemap/tileset/wall-3.png" type="Texture" id=68]
+[ext_resource path="res://Tilemap/tileset/window_1.png" type="Texture" id=69]
+[ext_resource path="res://Tilemap/tileset/window_2.png" type="Texture" id=70]
+[ext_resource path="res://Tilemap/tileset/window_3.png" type="Texture" id=71]
+[ext_resource path="res://Tilemap/tileset/window_4.png" type="Texture" id=72]
+[ext_resource path="res://Tilemap/tileset/window_5.png" type="Texture" id=73]
+[ext_resource path="res://Tilemap/tileset/window_6.png" type="Texture" id=74]
+[ext_resource path="res://Tilemap/tileset/window_7.png" type="Texture" id=75]
+[ext_resource path="res://Tilemap/tileset/window_8.png" type="Texture" id=76]
+[ext_resource path="res://Tilemap/tileset/board.png" type="Texture" id=77]
+[ext_resource path="res://Tilemap/tileset/window-1.png" type="Texture" id=78]
+[ext_resource path="res://Tilemap/tileset/window-2.png" type="Texture" id=79]
 
 [sub_resource type="RectangleShape2D" id=1]
 
@@ -36,16 +105,31 @@ extents = Vector2( 32, 32 )
 custom_solver_bias = 0.0
 extents = Vector2( 32, 32 )
 
+[sub_resource type="RectangleShape2D" id=6]
+
+custom_solver_bias = 0.0
+extents = Vector2( 32, 32 )
+
+[sub_resource type="RectangleShape2D" id=7]
+
+custom_solver_bias = 0.0
+extents = Vector2( 32, 32 )
+
+[sub_resource type="RectangleShape2D" id=8]
+
+custom_solver_bias = 0.0
+extents = Vector2( 32, 32 )
+
 [resource]
 
 0/name = "Sprite"
 0/texture = ExtResource( 1 )
 0/tex_offset = Vector2( 0, 0 )
 0/modulate = Color( 1, 1, 1, 1 )
-0/region = Rect2( 0, 0, 64, 66 )
-0/occluder_offset = Vector2( 32, 33 )
-0/navigation_offset = Vector2( 32, 33 )
-0/shape_offset = Vector2( 32, 33 )
+0/region = Rect2( 0, 0, 104, 104 )
+0/occluder_offset = Vector2( 52, 52 )
+0/navigation_offset = Vector2( 52, 52 )
+0/shape_offset = Vector2( 0, 0 )
 0/shapes = [ SubResource( 1 ) ]
 0/one_way_collision_direction = Vector2( 0, 0 )
 0/one_way_collision_max_depth = 0.0
@@ -61,40 +145,40 @@ extents = Vector2( 32, 32 )
 1/one_way_collision_direction = Vector2( 0, 0 )
 1/one_way_collision_max_depth = 0.0
 2/name = "block-2"
-2/texture = ExtResource( 3 )
+2/texture = ExtResource( 13 )
 2/tex_offset = Vector2( 0, 0 )
 2/modulate = Color( 1, 1, 1, 1 )
 2/region = Rect2( 0, 0, 64, 64 )
 2/occluder_offset = Vector2( 32, 32 )
 2/navigation_offset = Vector2( 32, 32 )
 2/shape_offset = Vector2( 32, 32 )
-2/shapes = [ SubResource( 3 ) ]
+2/shapes = [ SubResource( 5 ) ]
 2/one_way_collision_direction = Vector2( 0, 0 )
 2/one_way_collision_max_depth = 0.0
 3/name = "block-3"
-3/texture = ExtResource( 4 )
+3/texture = ExtResource( 24 )
 3/tex_offset = Vector2( 0, 0 )
 3/modulate = Color( 1, 1, 1, 1 )
 3/region = Rect2( 0, 0, 64, 64 )
-3/occluder_offset = Vector2( 32, 32 )
-3/navigation_offset = Vector2( 32, 32 )
-3/shape_offset = Vector2( 32, 32 )
-3/shapes = [ SubResource( 4 ) ]
+3/occluder_offset = Vector2( 32, 28.5752 )
+3/navigation_offset = Vector2( 32, 28.5752 )
+3/shape_offset = Vector2( 32, 28.5752 )
+3/shapes = [ SubResource( 7 ) ]
 3/one_way_collision_direction = Vector2( 0, 0 )
 3/one_way_collision_max_depth = 0.0
 4/name = "block-4"
-4/texture = ExtResource( 5 )
+4/texture = ExtResource( 35 )
 4/tex_offset = Vector2( 0, 0 )
 4/modulate = Color( 1, 1, 1, 1 )
 4/region = Rect2( 0, 0, 64, 64 )
 4/occluder_offset = Vector2( 32, 32 )
 4/navigation_offset = Vector2( 32, 32 )
 4/shape_offset = Vector2( 32, 32 )
-4/shapes = [ SubResource( 5 ) ]
+4/shapes = [ SubResource( 8 ) ]
 4/one_way_collision_direction = Vector2( 0, 0 )
 4/one_way_collision_max_depth = 0.0
 5/name = "wall-1"
-5/texture = ExtResource( 6 )
+5/texture = ExtResource( 46 )
 5/tex_offset = Vector2( 0, 0 )
 5/modulate = Color( 1, 1, 1, 1 )
 5/region = Rect2( 0, 0, 64, 64 )
@@ -105,7 +189,7 @@ extents = Vector2( 32, 32 )
 5/one_way_collision_direction = Vector2( 0, 0 )
 5/one_way_collision_max_depth = 0.0
 6/name = "wall-2"
-6/texture = ExtResource( 7 )
+6/texture = ExtResource( 57 )
 6/tex_offset = Vector2( 0, 0 )
 6/modulate = Color( 1, 1, 1, 1 )
 6/region = Rect2( 0, 0, 64, 64 )
@@ -116,7 +200,7 @@ extents = Vector2( 32, 32 )
 6/one_way_collision_direction = Vector2( 0, 0 )
 6/one_way_collision_max_depth = 0.0
 7/name = "wall-3"
-7/texture = ExtResource( 8 )
+7/texture = ExtResource( 68 )
 7/tex_offset = Vector2( 0, 0 )
 7/modulate = Color( 1, 1, 1, 1 )
 7/region = Rect2( 0, 0, 64, 64 )
@@ -127,7 +211,7 @@ extents = Vector2( 32, 32 )
 7/one_way_collision_direction = Vector2( 0, 0 )
 7/one_way_collision_max_depth = 0.0
 8/name = "window-1"
-8/texture = ExtResource( 9 )
+8/texture = ExtResource( 78 )
 8/tex_offset = Vector2( 0, 0 )
 8/modulate = Color( 1, 1, 1, 1 )
 8/region = Rect2( 0, 0, 64, 64 )
@@ -138,7 +222,7 @@ extents = Vector2( 32, 32 )
 8/one_way_collision_direction = Vector2( 0, 0 )
 8/one_way_collision_max_depth = 0.0
 9/name = "window-2"
-9/texture = ExtResource( 10 )
+9/texture = ExtResource( 79 )
 9/tex_offset = Vector2( 0, 0 )
 9/modulate = Color( 1, 1, 1, 1 )
 9/region = Rect2( 0, 0, 64, 64 )
@@ -148,4 +232,763 @@ extents = Vector2( 32, 32 )
 9/shapes = [  ]
 9/one_way_collision_direction = Vector2( 0, 0 )
 9/one_way_collision_max_depth = 0.0
+10/name = "block_1-1"
+10/texture = ExtResource( 3 )
+10/tex_offset = Vector2( 0, 0 )
+10/modulate = Color( 1, 1, 1, 1 )
+10/region = Rect2( 0, 0, 64, 64 )
+10/occluder_offset = Vector2( 32, 32 )
+10/navigation_offset = Vector2( 32, 32 )
+10/shape_offset = Vector2( 32, 32 )
+10/shapes = [ SubResource( 3 ) ]
+10/one_way_collision_direction = Vector2( 0, 0 )
+10/one_way_collision_max_depth = 0.0
+11/name = "block_1-2"
+11/texture = ExtResource( 4 )
+11/tex_offset = Vector2( 0, 0 )
+11/modulate = Color( 1, 1, 1, 1 )
+11/region = Rect2( 0, 0, 64, 64 )
+11/occluder_offset = Vector2( 32, 32 )
+11/navigation_offset = Vector2( 32, 32 )
+11/shape_offset = Vector2( 32, 32 )
+11/shapes = [ SubResource( 4 ) ]
+11/one_way_collision_direction = Vector2( 0, 0 )
+11/one_way_collision_max_depth = 0.0
+12/name = "block_1-3"
+12/texture = ExtResource( 5 )
+12/tex_offset = Vector2( 0, 0 )
+12/modulate = Color( 1, 1, 1, 1 )
+12/region = Rect2( 0, 0, 64, 64 )
+12/occluder_offset = Vector2( 32, 32 )
+12/navigation_offset = Vector2( 32, 32 )
+12/shape_offset = Vector2( 32, 32 )
+12/shapes = [ SubResource( 4 ) ]
+12/one_way_collision_direction = Vector2( 0, 0 )
+12/one_way_collision_max_depth = 0.0
+13/name = "block_1-4"
+13/texture = ExtResource( 6 )
+13/tex_offset = Vector2( 0, 0 )
+13/modulate = Color( 1, 1, 1, 1 )
+13/region = Rect2( 0, 0, 64, 64 )
+13/occluder_offset = Vector2( 32, 32 )
+13/navigation_offset = Vector2( 32, 32 )
+13/shape_offset = Vector2( 32, 32 )
+13/shapes = [ SubResource( 4 ) ]
+13/one_way_collision_direction = Vector2( 0, 0 )
+13/one_way_collision_max_depth = 0.0
+14/name = "block_1-5"
+14/texture = ExtResource( 7 )
+14/tex_offset = Vector2( 0, 0 )
+14/modulate = Color( 1, 1, 1, 1 )
+14/region = Rect2( 0, 0, 64, 64 )
+14/occluder_offset = Vector2( 32, 32 )
+14/navigation_offset = Vector2( 32, 32 )
+14/shape_offset = Vector2( 32, 32 )
+14/shapes = [ SubResource( 4 ) ]
+14/one_way_collision_direction = Vector2( 0, 0 )
+14/one_way_collision_max_depth = 0.0
+15/name = "block_1-6"
+15/texture = ExtResource( 8 )
+15/tex_offset = Vector2( 0, 0 )
+15/modulate = Color( 1, 1, 1, 1 )
+15/region = Rect2( 0, 0, 64, 64 )
+15/occluder_offset = Vector2( 32, 32 )
+15/navigation_offset = Vector2( 32, 32 )
+15/shape_offset = Vector2( 32, 32 )
+15/shapes = [ SubResource( 4 ) ]
+15/one_way_collision_direction = Vector2( 0, 0 )
+15/one_way_collision_max_depth = 0.0
+16/name = "block_1-7"
+16/texture = ExtResource( 9 )
+16/tex_offset = Vector2( 0, 0 )
+16/modulate = Color( 1, 1, 1, 1 )
+16/region = Rect2( 0, 0, 64, 64 )
+16/occluder_offset = Vector2( 32, 32 )
+16/navigation_offset = Vector2( 32, 32 )
+16/shape_offset = Vector2( 32, 32 )
+16/shapes = [ SubResource( 4 ) ]
+16/one_way_collision_direction = Vector2( 0, 0 )
+16/one_way_collision_max_depth = 0.0
+17/name = "block_1-8"
+17/texture = ExtResource( 10 )
+17/tex_offset = Vector2( 0, 0 )
+17/modulate = Color( 1, 1, 1, 1 )
+17/region = Rect2( 0, 0, 64, 64 )
+17/occluder_offset = Vector2( 32, 32 )
+17/navigation_offset = Vector2( 32, 32 )
+17/shape_offset = Vector2( 32, 32 )
+17/shapes = [ SubResource( 4 ) ]
+17/one_way_collision_direction = Vector2( 0, 0 )
+17/one_way_collision_max_depth = 0.0
+18/name = "block_1-9"
+18/texture = ExtResource( 11 )
+18/tex_offset = Vector2( 0, 0 )
+18/modulate = Color( 1, 1, 1, 1 )
+18/region = Rect2( 0, 0, 64, 64 )
+18/occluder_offset = Vector2( 32, 32 )
+18/navigation_offset = Vector2( 32, 32 )
+18/shape_offset = Vector2( 32, 32 )
+18/shapes = [ SubResource( 4 ) ]
+18/one_way_collision_direction = Vector2( 0, 0 )
+18/one_way_collision_max_depth = 0.0
+19/name = "block_2-1"
+19/texture = ExtResource( 12 )
+19/tex_offset = Vector2( 0, 0 )
+19/modulate = Color( 1, 1, 1, 1 )
+19/region = Rect2( 0, 0, 64, 64 )
+19/occluder_offset = Vector2( 32, 32 )
+19/navigation_offset = Vector2( 32, 32 )
+19/shape_offset = Vector2( 32, 32 )
+19/shapes = [ SubResource( 3 ) ]
+19/one_way_collision_direction = Vector2( 0, 0 )
+19/one_way_collision_max_depth = 0.0
+20/name = "block_2-2"
+20/texture = ExtResource( 14 )
+20/tex_offset = Vector2( 0, 0 )
+20/modulate = Color( 1, 1, 1, 1 )
+20/region = Rect2( 0, 0, 64, 64 )
+20/occluder_offset = Vector2( 32, 32 )
+20/navigation_offset = Vector2( 32, 32 )
+20/shape_offset = Vector2( 32, 32 )
+20/shapes = [ SubResource( 3 ) ]
+20/one_way_collision_direction = Vector2( 0, 0 )
+20/one_way_collision_max_depth = 0.0
+21/name = "block_2-3"
+21/texture = ExtResource( 15 )
+21/tex_offset = Vector2( 0, 0 )
+21/modulate = Color( 1, 1, 1, 1 )
+21/region = Rect2( 0, 0, 64, 64 )
+21/occluder_offset = Vector2( 32, 32 )
+21/navigation_offset = Vector2( 32, 32 )
+21/shape_offset = Vector2( 32, 32 )
+21/shapes = [ SubResource( 3 ) ]
+21/one_way_collision_direction = Vector2( 0, 0 )
+21/one_way_collision_max_depth = 0.0
+22/name = "block_2-4"
+22/texture = ExtResource( 16 )
+22/tex_offset = Vector2( 0, 0 )
+22/modulate = Color( 1, 1, 1, 1 )
+22/region = Rect2( 0, 0, 64, 64 )
+22/occluder_offset = Vector2( 32, 32 )
+22/navigation_offset = Vector2( 32, 32 )
+22/shape_offset = Vector2( 32, 32 )
+22/shapes = [ SubResource( 3 ) ]
+22/one_way_collision_direction = Vector2( 0, 0 )
+22/one_way_collision_max_depth = 0.0
+23/name = "block_2-5"
+23/texture = ExtResource( 17 )
+23/tex_offset = Vector2( 0, 0 )
+23/modulate = Color( 1, 1, 1, 1 )
+23/region = Rect2( 0, 0, 64, 64 )
+23/occluder_offset = Vector2( 32, 32 )
+23/navigation_offset = Vector2( 32, 32 )
+23/shape_offset = Vector2( 32, 32 )
+23/shapes = [ SubResource( 3 ) ]
+23/one_way_collision_direction = Vector2( 0, 0 )
+23/one_way_collision_max_depth = 0.0
+24/name = "block_2-6"
+24/texture = ExtResource( 18 )
+24/tex_offset = Vector2( 0, 0 )
+24/modulate = Color( 1, 1, 1, 1 )
+24/region = Rect2( 0, 0, 64, 64 )
+24/occluder_offset = Vector2( 32, 32 )
+24/navigation_offset = Vector2( 32, 32 )
+24/shape_offset = Vector2( 32, 32 )
+24/shapes = [ SubResource( 3 ) ]
+24/one_way_collision_direction = Vector2( 0, 0 )
+24/one_way_collision_max_depth = 0.0
+25/name = "block_2-7"
+25/texture = ExtResource( 19 )
+25/tex_offset = Vector2( 0, 0 )
+25/modulate = Color( 1, 1, 1, 1 )
+25/region = Rect2( 0, 0, 64, 64 )
+25/occluder_offset = Vector2( 32, 32 )
+25/navigation_offset = Vector2( 32, 32 )
+25/shape_offset = Vector2( 32, 32 )
+25/shapes = [ SubResource( 3 ) ]
+25/one_way_collision_direction = Vector2( 0, 0 )
+25/one_way_collision_max_depth = 0.0
+26/name = "block_2-8"
+26/texture = ExtResource( 20 )
+26/tex_offset = Vector2( 0, 0 )
+26/modulate = Color( 1, 1, 1, 1 )
+26/region = Rect2( 0, 0, 64, 64 )
+26/occluder_offset = Vector2( 32, 32 )
+26/navigation_offset = Vector2( 32, 32 )
+26/shape_offset = Vector2( 32, 32 )
+26/shapes = [ SubResource( 3 ) ]
+26/one_way_collision_direction = Vector2( 0, 0 )
+26/one_way_collision_max_depth = 0.0
+27/name = "block_2-9"
+27/texture = ExtResource( 21 )
+27/tex_offset = Vector2( 0, 0 )
+27/modulate = Color( 1, 1, 1, 1 )
+27/region = Rect2( 0, 0, 64, 64 )
+27/occluder_offset = Vector2( 32, 32 )
+27/navigation_offset = Vector2( 32, 32 )
+27/shape_offset = Vector2( 32, 32 )
+27/shapes = [ SubResource( 3 ) ]
+27/one_way_collision_direction = Vector2( 0, 0 )
+27/one_way_collision_max_depth = 0.0
+28/name = "block_3-1"
+28/texture = ExtResource( 22 )
+28/tex_offset = Vector2( 0, 0 )
+28/modulate = Color( 1, 1, 1, 1 )
+28/region = Rect2( 0, 0, 64, 64 )
+28/occluder_offset = Vector2( 32, 32 )
+28/navigation_offset = Vector2( 32, 32 )
+28/shape_offset = Vector2( 32, 32 )
+28/shapes = [ SubResource( 6 ) ]
+28/one_way_collision_direction = Vector2( 0, 0 )
+28/one_way_collision_max_depth = 0.0
+29/name = "block_3-2"
+29/texture = ExtResource( 23 )
+29/tex_offset = Vector2( 0, 0 )
+29/modulate = Color( 1, 1, 1, 1 )
+29/region = Rect2( 0, 0, 64, 64 )
+29/occluder_offset = Vector2( 32, 32 )
+29/navigation_offset = Vector2( 32, 32 )
+29/shape_offset = Vector2( 32, 32 )
+29/shapes = [ SubResource( 6 ) ]
+29/one_way_collision_direction = Vector2( 0, 0 )
+29/one_way_collision_max_depth = 0.0
+30/name = "block_3-3"
+30/texture = ExtResource( 25 )
+30/tex_offset = Vector2( 0, 0 )
+30/modulate = Color( 1, 1, 1, 1 )
+30/region = Rect2( 0, 0, 64, 64 )
+30/occluder_offset = Vector2( 32, 32 )
+30/navigation_offset = Vector2( 32, 32 )
+30/shape_offset = Vector2( 32, 32 )
+30/shapes = [ SubResource( 6 ) ]
+30/one_way_collision_direction = Vector2( 0, 0 )
+30/one_way_collision_max_depth = 0.0
+31/name = "block_3-4"
+31/texture = ExtResource( 26 )
+31/tex_offset = Vector2( 0, 0 )
+31/modulate = Color( 1, 1, 1, 1 )
+31/region = Rect2( 0, 0, 64, 64 )
+31/occluder_offset = Vector2( 32, 32 )
+31/navigation_offset = Vector2( 32, 32 )
+31/shape_offset = Vector2( 32, 32 )
+31/shapes = [ SubResource( 6 ) ]
+31/one_way_collision_direction = Vector2( 0, 0 )
+31/one_way_collision_max_depth = 0.0
+32/name = "block_3-5"
+32/texture = ExtResource( 27 )
+32/tex_offset = Vector2( 0, 0 )
+32/modulate = Color( 1, 1, 1, 1 )
+32/region = Rect2( 0, 0, 64, 64 )
+32/occluder_offset = Vector2( 32, 32 )
+32/navigation_offset = Vector2( 32, 32 )
+32/shape_offset = Vector2( 32, 32 )
+32/shapes = [ SubResource( 6 ) ]
+32/one_way_collision_direction = Vector2( 0, 0 )
+32/one_way_collision_max_depth = 0.0
+33/name = "block_3-6"
+33/texture = ExtResource( 28 )
+33/tex_offset = Vector2( 0, 0 )
+33/modulate = Color( 1, 1, 1, 1 )
+33/region = Rect2( 0, 0, 64, 64 )
+33/occluder_offset = Vector2( 32, 32 )
+33/navigation_offset = Vector2( 32, 32 )
+33/shape_offset = Vector2( 32, 32 )
+33/shapes = [ SubResource( 6 ) ]
+33/one_way_collision_direction = Vector2( 0, 0 )
+33/one_way_collision_max_depth = 0.0
+34/name = "block_3-7"
+34/texture = ExtResource( 29 )
+34/tex_offset = Vector2( 0, 0 )
+34/modulate = Color( 1, 1, 1, 1 )
+34/region = Rect2( 0, 0, 64, 64 )
+34/occluder_offset = Vector2( 32, 32 )
+34/navigation_offset = Vector2( 32, 32 )
+34/shape_offset = Vector2( 32, 32 )
+34/shapes = [ SubResource( 6 ) ]
+34/one_way_collision_direction = Vector2( 0, 0 )
+34/one_way_collision_max_depth = 0.0
+35/name = "block_3-8"
+35/texture = ExtResource( 30 )
+35/tex_offset = Vector2( 0, 0 )
+35/modulate = Color( 1, 1, 1, 1 )
+35/region = Rect2( 0, 0, 64, 64 )
+35/occluder_offset = Vector2( 32, 32 )
+35/navigation_offset = Vector2( 32, 32 )
+35/shape_offset = Vector2( 32, 32 )
+35/shapes = [ SubResource( 6 ) ]
+35/one_way_collision_direction = Vector2( 0, 0 )
+35/one_way_collision_max_depth = 0.0
+36/name = "block_3-9"
+36/texture = ExtResource( 31 )
+36/tex_offset = Vector2( 0, 0 )
+36/modulate = Color( 1, 1, 1, 1 )
+36/region = Rect2( 0, 0, 64, 64 )
+36/occluder_offset = Vector2( 32, 32 )
+36/navigation_offset = Vector2( 32, 32 )
+36/shape_offset = Vector2( 32, 32 )
+36/shapes = [ SubResource( 6 ) ]
+36/one_way_collision_direction = Vector2( 0, 0 )
+36/one_way_collision_max_depth = 0.0
+37/name = "block_4-1"
+37/texture = ExtResource( 32 )
+37/tex_offset = Vector2( 0, 0 )
+37/modulate = Color( 1, 1, 1, 1 )
+37/region = Rect2( 0, 0, 64, 64 )
+37/occluder_offset = Vector2( 32, 32 )
+37/navigation_offset = Vector2( 32, 32 )
+37/shape_offset = Vector2( 32, 32 )
+37/shapes = [ SubResource( 6 ) ]
+37/one_way_collision_direction = Vector2( 0, 0 )
+37/one_way_collision_max_depth = 0.0
+38/name = "block_4-2"
+38/texture = ExtResource( 33 )
+38/tex_offset = Vector2( 0, 0 )
+38/modulate = Color( 1, 1, 1, 1 )
+38/region = Rect2( 0, 0, 64, 64 )
+38/occluder_offset = Vector2( 32, 32 )
+38/navigation_offset = Vector2( 32, 32 )
+38/shape_offset = Vector2( 32, 32 )
+38/shapes = [ SubResource( 6 ) ]
+38/one_way_collision_direction = Vector2( 0, 0 )
+38/one_way_collision_max_depth = 0.0
+39/name = "block_4-3"
+39/texture = ExtResource( 34 )
+39/tex_offset = Vector2( 0, 0 )
+39/modulate = Color( 1, 1, 1, 1 )
+39/region = Rect2( 0, 0, 64, 64 )
+39/occluder_offset = Vector2( 32, 32 )
+39/navigation_offset = Vector2( 32, 32 )
+39/shape_offset = Vector2( 32, 32 )
+39/shapes = [ SubResource( 6 ) ]
+39/one_way_collision_direction = Vector2( 0, 0 )
+39/one_way_collision_max_depth = 0.0
+40/name = "block_4-4"
+40/texture = ExtResource( 36 )
+40/tex_offset = Vector2( 0, 0 )
+40/modulate = Color( 1, 1, 1, 1 )
+40/region = Rect2( 0, 0, 64, 64 )
+40/occluder_offset = Vector2( 32, 32 )
+40/navigation_offset = Vector2( 32, 32 )
+40/shape_offset = Vector2( 32, 32 )
+40/shapes = [ SubResource( 6 ) ]
+40/one_way_collision_direction = Vector2( 0, 0 )
+40/one_way_collision_max_depth = 0.0
+41/name = "block_4-5"
+41/texture = ExtResource( 37 )
+41/tex_offset = Vector2( 0, 0 )
+41/modulate = Color( 1, 1, 1, 1 )
+41/region = Rect2( 0, 0, 64, 64 )
+41/occluder_offset = Vector2( 32, 32 )
+41/navigation_offset = Vector2( 32, 32 )
+41/shape_offset = Vector2( 32, 32 )
+41/shapes = [ SubResource( 6 ) ]
+41/one_way_collision_direction = Vector2( 0, 0 )
+41/one_way_collision_max_depth = 0.0
+42/name = "block_4-6"
+42/texture = ExtResource( 38 )
+42/tex_offset = Vector2( 0, 0 )
+42/modulate = Color( 1, 1, 1, 1 )
+42/region = Rect2( 0, 0, 64, 64 )
+42/occluder_offset = Vector2( 32, 32 )
+42/navigation_offset = Vector2( 32, 32 )
+42/shape_offset = Vector2( 32, 32 )
+42/shapes = [ SubResource( 6 ) ]
+42/one_way_collision_direction = Vector2( 0, 0 )
+42/one_way_collision_max_depth = 0.0
+43/name = "block_4-7"
+43/texture = ExtResource( 39 )
+43/tex_offset = Vector2( 0, 0 )
+43/modulate = Color( 1, 1, 1, 1 )
+43/region = Rect2( 0, 0, 64, 64 )
+43/occluder_offset = Vector2( 32, 32 )
+43/navigation_offset = Vector2( 32, 32 )
+43/shape_offset = Vector2( 32, 32 )
+43/shapes = [ SubResource( 6 ) ]
+43/one_way_collision_direction = Vector2( 0, 0 )
+43/one_way_collision_max_depth = 0.0
+44/name = "block_4-8"
+44/texture = ExtResource( 40 )
+44/tex_offset = Vector2( 0, 0 )
+44/modulate = Color( 1, 1, 1, 1 )
+44/region = Rect2( 0, 0, 64, 64 )
+44/occluder_offset = Vector2( 32, 32 )
+44/navigation_offset = Vector2( 32, 32 )
+44/shape_offset = Vector2( 32, 32 )
+44/shapes = [ SubResource( 6 ) ]
+44/one_way_collision_direction = Vector2( 0, 0 )
+44/one_way_collision_max_depth = 0.0
+45/name = "block_4-9"
+45/texture = ExtResource( 41 )
+45/tex_offset = Vector2( 0, 0 )
+45/modulate = Color( 1, 1, 1, 1 )
+45/region = Rect2( 0, 0, 64, 64 )
+45/occluder_offset = Vector2( 32, 32 )
+45/navigation_offset = Vector2( 32, 32 )
+45/shape_offset = Vector2( 32, 32 )
+45/shapes = [ SubResource( 6 ) ]
+45/one_way_collision_direction = Vector2( 0, 0 )
+45/one_way_collision_max_depth = 0.0
+46/name = "box_2-1"
+46/texture = ExtResource( 42 )
+46/tex_offset = Vector2( 0, 0 )
+46/modulate = Color( 1, 1, 1, 1 )
+46/region = Rect2( 0, 0, 64, 64 )
+46/occluder_offset = Vector2( 32, 32 )
+46/navigation_offset = Vector2( 32, 32 )
+46/shape_offset = Vector2( 32, 32 )
+46/shapes = [ SubResource( 6 ) ]
+46/one_way_collision_direction = Vector2( 0, 0 )
+46/one_way_collision_max_depth = 0.0
+47/name = "box_2-2"
+47/texture = ExtResource( 43 )
+47/tex_offset = Vector2( 0, 0 )
+47/modulate = Color( 1, 1, 1, 1 )
+47/region = Rect2( 0, 0, 64, 64 )
+47/occluder_offset = Vector2( 32, 32 )
+47/navigation_offset = Vector2( 32, 32 )
+47/shape_offset = Vector2( 32, 32 )
+47/shapes = [ SubResource( 6 ) ]
+47/one_way_collision_direction = Vector2( 0, 0 )
+47/one_way_collision_max_depth = 0.0
+48/name = "box_2-3"
+48/texture = ExtResource( 44 )
+48/tex_offset = Vector2( 0, 0 )
+48/modulate = Color( 1, 1, 1, 1 )
+48/region = Rect2( 0, 0, 64, 64 )
+48/occluder_offset = Vector2( 32, 32 )
+48/navigation_offset = Vector2( 32, 32 )
+48/shape_offset = Vector2( 32, 32 )
+48/shapes = [ SubResource( 6 ) ]
+48/one_way_collision_direction = Vector2( 0, 0 )
+48/one_way_collision_max_depth = 0.0
+49/name = "box_2-4"
+49/texture = ExtResource( 45 )
+49/tex_offset = Vector2( 0, 0 )
+49/modulate = Color( 1, 1, 1, 1 )
+49/region = Rect2( 0, 0, 64, 64 )
+49/occluder_offset = Vector2( 32, 32 )
+49/navigation_offset = Vector2( 32, 32 )
+49/shape_offset = Vector2( 32, 32 )
+49/shapes = [ SubResource( 6 ) ]
+49/one_way_collision_direction = Vector2( 0, 0 )
+49/one_way_collision_max_depth = 0.0
+50/name = "box_2-5"
+50/texture = ExtResource( 47 )
+50/tex_offset = Vector2( 0, 0 )
+50/modulate = Color( 1, 1, 1, 1 )
+50/region = Rect2( 0, 0, 64, 64 )
+50/occluder_offset = Vector2( 32, 32 )
+50/navigation_offset = Vector2( 32, 32 )
+50/shape_offset = Vector2( 32, 32 )
+50/shapes = [ SubResource( 6 ) ]
+50/one_way_collision_direction = Vector2( 0, 0 )
+50/one_way_collision_max_depth = 0.0
+51/name = "box_2-6"
+51/texture = ExtResource( 48 )
+51/tex_offset = Vector2( 0, 0 )
+51/modulate = Color( 1, 1, 1, 1 )
+51/region = Rect2( 0, 0, 64, 64 )
+51/occluder_offset = Vector2( 32, 32 )
+51/navigation_offset = Vector2( 32, 32 )
+51/shape_offset = Vector2( 32, 32 )
+51/shapes = [ SubResource( 6 ) ]
+51/one_way_collision_direction = Vector2( 0, 0 )
+51/one_way_collision_max_depth = 0.0
+52/name = "box_2-7"
+52/texture = ExtResource( 49 )
+52/tex_offset = Vector2( 0, 0 )
+52/modulate = Color( 1, 1, 1, 1 )
+52/region = Rect2( 0, 0, 64, 64 )
+52/occluder_offset = Vector2( 32, 32 )
+52/navigation_offset = Vector2( 32, 32 )
+52/shape_offset = Vector2( 32, 32 )
+52/shapes = [ SubResource( 6 ) ]
+52/one_way_collision_direction = Vector2( 0, 0 )
+52/one_way_collision_max_depth = 0.0
+53/name = "box_2-8"
+53/texture = ExtResource( 50 )
+53/tex_offset = Vector2( 0, 0 )
+53/modulate = Color( 1, 1, 1, 1 )
+53/region = Rect2( 0, 0, 64, 64 )
+53/occluder_offset = Vector2( 32, 32 )
+53/navigation_offset = Vector2( 32, 32 )
+53/shape_offset = Vector2( 32, 32 )
+53/shapes = [ SubResource( 6 ) ]
+53/one_way_collision_direction = Vector2( 0, 0 )
+53/one_way_collision_max_depth = 0.0
+54/name = "box_2-9"
+54/texture = ExtResource( 51 )
+54/tex_offset = Vector2( 0, 0 )
+54/modulate = Color( 1, 1, 1, 1 )
+54/region = Rect2( 0, 0, 64, 64 )
+54/occluder_offset = Vector2( 32, 32 )
+54/navigation_offset = Vector2( 32, 32 )
+54/shape_offset = Vector2( 32, 32 )
+54/shapes = [ SubResource( 6 ) ]
+54/one_way_collision_direction = Vector2( 0, 0 )
+54/one_way_collision_max_depth = 0.0
+55/name = "box_3-1"
+55/texture = ExtResource( 52 )
+55/tex_offset = Vector2( 0, 0 )
+55/modulate = Color( 1, 1, 1, 1 )
+55/region = Rect2( 0, 0, 64, 64 )
+55/occluder_offset = Vector2( 32, 32 )
+55/navigation_offset = Vector2( 32, 32 )
+55/shape_offset = Vector2( 32, 32 )
+55/shapes = [ SubResource( 6 ) ]
+55/one_way_collision_direction = Vector2( 0, 0 )
+55/one_way_collision_max_depth = 0.0
+56/name = "box_3-2"
+56/texture = ExtResource( 53 )
+56/tex_offset = Vector2( 0, 0 )
+56/modulate = Color( 1, 1, 1, 1 )
+56/region = Rect2( 0, 0, 64, 64 )
+56/occluder_offset = Vector2( 32, 32 )
+56/navigation_offset = Vector2( 32, 32 )
+56/shape_offset = Vector2( 32, 32 )
+56/shapes = [ SubResource( 6 ) ]
+56/one_way_collision_direction = Vector2( 0, 0 )
+56/one_way_collision_max_depth = 0.0
+57/name = "box_3-3"
+57/texture = ExtResource( 54 )
+57/tex_offset = Vector2( 0, 0 )
+57/modulate = Color( 1, 1, 1, 1 )
+57/region = Rect2( 0, 0, 64, 64 )
+57/occluder_offset = Vector2( 32, 32 )
+57/navigation_offset = Vector2( 32, 32 )
+57/shape_offset = Vector2( 32, 32 )
+57/shapes = [ SubResource( 6 ) ]
+57/one_way_collision_direction = Vector2( 0, 0 )
+57/one_way_collision_max_depth = 0.0
+58/name = "box_3-4"
+58/texture = ExtResource( 55 )
+58/tex_offset = Vector2( 0, 0 )
+58/modulate = Color( 1, 1, 1, 1 )
+58/region = Rect2( 0, 0, 64, 64 )
+58/occluder_offset = Vector2( 32, 32 )
+58/navigation_offset = Vector2( 32, 32 )
+58/shape_offset = Vector2( 32, 32 )
+58/shapes = [ SubResource( 6 ) ]
+58/one_way_collision_direction = Vector2( 0, 0 )
+58/one_way_collision_max_depth = 0.0
+59/name = "box_3-5"
+59/texture = ExtResource( 56 )
+59/tex_offset = Vector2( 0, 0 )
+59/modulate = Color( 1, 1, 1, 1 )
+59/region = Rect2( 0, 0, 64, 64 )
+59/occluder_offset = Vector2( 32, 32 )
+59/navigation_offset = Vector2( 32, 32 )
+59/shape_offset = Vector2( 32, 32 )
+59/shapes = [ SubResource( 6 ) ]
+59/one_way_collision_direction = Vector2( 0, 0 )
+59/one_way_collision_max_depth = 0.0
+60/name = "box_3-6"
+60/texture = ExtResource( 58 )
+60/tex_offset = Vector2( 0, 0 )
+60/modulate = Color( 1, 1, 1, 1 )
+60/region = Rect2( 0, 0, 64, 64 )
+60/occluder_offset = Vector2( 32, 32 )
+60/navigation_offset = Vector2( 32, 32 )
+60/shape_offset = Vector2( 32, 32 )
+60/shapes = [ SubResource( 6 ) ]
+60/one_way_collision_direction = Vector2( 0, 0 )
+60/one_way_collision_max_depth = 0.0
+61/name = "box_3-7"
+61/texture = ExtResource( 59 )
+61/tex_offset = Vector2( 0, 0 )
+61/modulate = Color( 1, 1, 1, 1 )
+61/region = Rect2( 0, 0, 64, 64 )
+61/occluder_offset = Vector2( 32, 32 )
+61/navigation_offset = Vector2( 32, 32 )
+61/shape_offset = Vector2( 32, 32 )
+61/shapes = [ SubResource( 6 ) ]
+61/one_way_collision_direction = Vector2( 0, 0 )
+61/one_way_collision_max_depth = 0.0
+62/name = "box_3-8"
+62/texture = ExtResource( 60 )
+62/tex_offset = Vector2( 0, 0 )
+62/modulate = Color( 1, 1, 1, 1 )
+62/region = Rect2( 0, 0, 64, 64 )
+62/occluder_offset = Vector2( 32, 32 )
+62/navigation_offset = Vector2( 32, 32 )
+62/shape_offset = Vector2( 32, 32 )
+62/shapes = [ SubResource( 6 ) ]
+62/one_way_collision_direction = Vector2( 0, 0 )
+62/one_way_collision_max_depth = 0.0
+63/name = "box_3-9"
+63/texture = ExtResource( 61 )
+63/tex_offset = Vector2( 0, 0 )
+63/modulate = Color( 1, 1, 1, 1 )
+63/region = Rect2( 0, 0, 64, 64 )
+63/occluder_offset = Vector2( 32, 32 )
+63/navigation_offset = Vector2( 32, 32 )
+63/shape_offset = Vector2( 32, 32 )
+63/shapes = [ SubResource( 6 ) ]
+63/one_way_collision_direction = Vector2( 0, 0 )
+63/one_way_collision_max_depth = 0.0
+64/name = "tile_a-1"
+64/texture = ExtResource( 62 )
+64/tex_offset = Vector2( 0, 0 )
+64/modulate = Color( 1, 1, 1, 1 )
+64/region = Rect2( 0, 0, 64, 64 )
+64/occluder_offset = Vector2( 32, 32 )
+64/navigation_offset = Vector2( 32, 32 )
+64/shape_offset = Vector2( 32, 32 )
+64/shapes = [ SubResource( 6 ) ]
+64/one_way_collision_direction = Vector2( 0, 0 )
+64/one_way_collision_max_depth = 0.0
+65/name = "tile_a-2"
+65/texture = ExtResource( 63 )
+65/tex_offset = Vector2( 0, 0 )
+65/modulate = Color( 1, 1, 1, 1 )
+65/region = Rect2( 0, 0, 64, 64 )
+65/occluder_offset = Vector2( 32, 32 )
+65/navigation_offset = Vector2( 32, 32 )
+65/shape_offset = Vector2( 32, 32 )
+65/shapes = [ SubResource( 6 ) ]
+65/one_way_collision_direction = Vector2( 0, 0 )
+65/one_way_collision_max_depth = 0.0
+66/name = "tile_a-3"
+66/texture = ExtResource( 64 )
+66/tex_offset = Vector2( 0, 0 )
+66/modulate = Color( 1, 1, 1, 1 )
+66/region = Rect2( 0, 0, 64, 64 )
+66/occluder_offset = Vector2( 32, 32 )
+66/navigation_offset = Vector2( 32, 32 )
+66/shape_offset = Vector2( 32, 32 )
+66/shapes = [ SubResource( 6 ) ]
+66/one_way_collision_direction = Vector2( 0, 0 )
+66/one_way_collision_max_depth = 0.0
+67/name = "tile_b-1"
+67/texture = ExtResource( 65 )
+67/tex_offset = Vector2( 0, 0 )
+67/modulate = Color( 1, 1, 1, 1 )
+67/region = Rect2( 0, 0, 64, 64 )
+67/occluder_offset = Vector2( 32, 32 )
+67/navigation_offset = Vector2( 32, 32 )
+67/shape_offset = Vector2( 32, 32 )
+67/shapes = [ SubResource( 6 ) ]
+67/one_way_collision_direction = Vector2( 0, 0 )
+67/one_way_collision_max_depth = 0.0
+68/name = "tile_b-2"
+68/texture = ExtResource( 66 )
+68/tex_offset = Vector2( 0, 0 )
+68/modulate = Color( 1, 1, 1, 1 )
+68/region = Rect2( 0, 0, 64, 64 )
+68/occluder_offset = Vector2( 32, 32 )
+68/navigation_offset = Vector2( 32, 32 )
+68/shape_offset = Vector2( 32, 32 )
+68/shapes = [ SubResource( 6 ) ]
+68/one_way_collision_direction = Vector2( 0, 0 )
+68/one_way_collision_max_depth = 0.0
+69/name = "tile_b-3"
+69/texture = ExtResource( 67 )
+69/tex_offset = Vector2( 0, 0 )
+69/modulate = Color( 1, 1, 1, 1 )
+69/region = Rect2( 0, 0, 64, 64 )
+69/occluder_offset = Vector2( 32, 32 )
+69/navigation_offset = Vector2( 32, 32 )
+69/shape_offset = Vector2( 32, 32 )
+69/shapes = [ SubResource( 6 ) ]
+69/one_way_collision_direction = Vector2( 0, 0 )
+69/one_way_collision_max_depth = 0.0
+70/name = "windowframe-1"
+70/texture = ExtResource( 69 )
+70/tex_offset = Vector2( 0, 0 )
+70/modulate = Color( 1, 1, 1, 1 )
+70/region = Rect2( 0, 0, 64, 64 )
+70/occluder_offset = Vector2( 32, 32 )
+70/navigation_offset = Vector2( 32, 32 )
+70/shape_offset = Vector2( 0, 0 )
+70/shapes = [  ]
+70/one_way_collision_direction = Vector2( 0, 0 )
+70/one_way_collision_max_depth = 0.0
+71/name = "windowframe-2"
+71/texture = ExtResource( 70 )
+71/tex_offset = Vector2( 0, 0 )
+71/modulate = Color( 1, 1, 1, 1 )
+71/region = Rect2( 0, 0, 64, 64 )
+71/occluder_offset = Vector2( 32, 32 )
+71/navigation_offset = Vector2( 32, 32 )
+71/shape_offset = Vector2( 0, 0 )
+71/shapes = [  ]
+71/one_way_collision_direction = Vector2( 0, 0 )
+71/one_way_collision_max_depth = 0.0
+72/name = "windowframe-3"
+72/texture = ExtResource( 71 )
+72/tex_offset = Vector2( 0, 0 )
+72/modulate = Color( 1, 1, 1, 1 )
+72/region = Rect2( 0, 0, 64, 64 )
+72/occluder_offset = Vector2( 32, 32 )
+72/navigation_offset = Vector2( 32, 32 )
+72/shape_offset = Vector2( 0, 0 )
+72/shapes = [  ]
+72/one_way_collision_direction = Vector2( 0, 0 )
+72/one_way_collision_max_depth = 0.0
+73/name = "windowframe-4"
+73/texture = ExtResource( 72 )
+73/tex_offset = Vector2( 0, 0 )
+73/modulate = Color( 1, 1, 1, 1 )
+73/region = Rect2( 0, 0, 64, 64 )
+73/occluder_offset = Vector2( 32, 32 )
+73/navigation_offset = Vector2( 32, 32 )
+73/shape_offset = Vector2( 0, 0 )
+73/shapes = [  ]
+73/one_way_collision_direction = Vector2( 0, 0 )
+73/one_way_collision_max_depth = 0.0
+74/name = "windowframe-5"
+74/texture = ExtResource( 73 )
+74/tex_offset = Vector2( 0, 0 )
+74/modulate = Color( 1, 1, 1, 1 )
+74/region = Rect2( 0, 0, 64, 64 )
+74/occluder_offset = Vector2( 32, 32 )
+74/navigation_offset = Vector2( 32, 32 )
+74/shape_offset = Vector2( 0, 0 )
+74/shapes = [  ]
+74/one_way_collision_direction = Vector2( 0, 0 )
+74/one_way_collision_max_depth = 0.0
+75/name = "windowframe-6"
+75/texture = ExtResource( 74 )
+75/tex_offset = Vector2( 0, 0 )
+75/modulate = Color( 1, 1, 1, 1 )
+75/region = Rect2( 0, 0, 64, 64 )
+75/occluder_offset = Vector2( 32, 32 )
+75/navigation_offset = Vector2( 32, 32 )
+75/shape_offset = Vector2( 0, 0 )
+75/shapes = [  ]
+75/one_way_collision_direction = Vector2( 0, 0 )
+75/one_way_collision_max_depth = 0.0
+76/name = "windowframe-7"
+76/texture = ExtResource( 75 )
+76/tex_offset = Vector2( 0, 0 )
+76/modulate = Color( 1, 1, 1, 1 )
+76/region = Rect2( 0, 0, 64, 64 )
+76/occluder_offset = Vector2( 32, 32 )
+76/navigation_offset = Vector2( 32, 32 )
+76/shape_offset = Vector2( 0, 0 )
+76/shapes = [  ]
+76/one_way_collision_direction = Vector2( 0, 0 )
+76/one_way_collision_max_depth = 0.0
+77/name = "windowframe-8"
+77/texture = ExtResource( 76 )
+77/tex_offset = Vector2( 0, 0 )
+77/modulate = Color( 1, 1, 1, 1 )
+77/region = Rect2( 0, 0, 64, 64 )
+77/occluder_offset = Vector2( 32, 32 )
+77/navigation_offset = Vector2( 32, 32 )
+77/shape_offset = Vector2( 0, 0 )
+77/shapes = [  ]
+77/one_way_collision_direction = Vector2( 0, 0 )
+77/one_way_collision_max_depth = 0.0
+78/name = "exit"
+78/texture = ExtResource( 77 )
+78/tex_offset = Vector2( 0, 0 )
+78/modulate = Color( 1, 1, 1, 1 )
+78/region = Rect2( 0, 0, 64, 32 )
+78/occluder_offset = Vector2( 32, 16 )
+78/navigation_offset = Vector2( 32, 16 )
+78/shape_offset = Vector2( 0, 0 )
+78/shapes = [  ]
+78/one_way_collision_direction = Vector2( 0, 0 )
+78/one_way_collision_max_depth = 0.0
 
