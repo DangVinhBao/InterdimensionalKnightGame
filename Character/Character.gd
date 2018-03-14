@@ -120,3 +120,20 @@ func die():
 	queue_free()
 	pass
 
+func get_state():
+	var save_dict = {
+		pos={
+			x=get_pos().x,
+			y=get_pos().y
+		},
+#		max_health=max_health
+	}
+	return save_dict
+
+#load game
+func load_state(data):
+	for attribute in data:
+		if attribute == 'pos':
+			set_pos(Vector2(data['pos']['x'], data['pos']['y']))
+		else:
+			set(attribute, data[attribute])
