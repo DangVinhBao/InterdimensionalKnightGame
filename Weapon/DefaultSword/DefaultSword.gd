@@ -7,7 +7,7 @@ onready var anim = get_node("anim")
 onready var atk1_combo1 = hitboxes.get_node("atk1_combo1")
 onready var atk1_combo2 = hitboxes.get_node("atk1_combo2")
 onready var atk1_combo3 = hitboxes.get_node("atk1_combo3")
-onready var atk1_air_spin = hitboxes.get_node("atk1_air_spin")
+onready var atk1_air_up = hitboxes.get_node("atk1_air_up")
 onready var atk2_thrust = hitboxes.get_node("atk2_thrust")
 onready var atk2_air_downward_thrust = hitboxes.get_node("atk2_air_downward_thrust")
 
@@ -35,7 +35,7 @@ func stop_all_hitboxes():
 	atk1_combo1.call_deferred("set_enable_monitoring", false)
 	atk1_combo2.call_deferred("set_enable_monitoring", false)
 	atk1_combo3.call_deferred("set_enable_monitoring", false)
-	atk1_air_spin.call_deferred("set_enable_monitoring", false)
+	atk1_air_up.call_deferred("set_enable_monitoring", false)
 	atk2_thrust.call_deferred("set_enable_monitoring", false)
 	atk2_air_downward_thrust.call_deferred("set_enable_monitoring", false)
 	pass
@@ -122,10 +122,9 @@ class StateAtk1Combo3 extends "res://Utils/AttackState.gd":
 
 class StateAtk1AirSpin extends "res://Utils/AttackState.gd":
 	func _init(weapon).(weapon):
-		HITBOX = weapon.atk1_air_spin
-		ANIM_PLAYER = weapon.anim
-		ANIM_NAME = "atk1airspin"
-		ANIM_PLAYER.play("init")
+		HITBOX = weapon.atk1_air_up
+		ANIM_PLAYER = USER.anim
+		ANIM_NAME = "atk1airup"
 		ANIM_PLAYER.play(ANIM_NAME)
 		switch_attack_func()
 		pass
@@ -134,6 +133,8 @@ class StateAtk1AirSpin extends "res://Utils/AttackState.gd":
 		pass
 	func callback_func():
 		WEAPON.air_move(USER)
+		if USER.ground_check():
+			WEAPON.stop_atking()
 		if not ANIM_PLAYER.is_playing():
 			WEAPON.stop_atking()
 		pass

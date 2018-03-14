@@ -10,7 +10,7 @@ extents = Vector2( 40, 64 )
 [sub_resource type="RectangleShape2D" id=2]
 
 custom_solver_bias = 0.0
-extents = Vector2( 43, 64 )
+extents = Vector2( 55, 64 )
 
 [sub_resource type="RectangleShape2D" id=3]
 
@@ -22,10 +22,10 @@ extents = Vector2( 62, 80 )
 custom_solver_bias = 0.0
 extents = Vector2( 65, 18 )
 
-[sub_resource type="CircleShape2D" id=5]
+[sub_resource type="RectangleShape2D" id=5]
 
 custom_solver_bias = 0.0
-radius = 97.0
+extents = Vector2( 71.7659, 96.3301 )
 
 [sub_resource type="RectangleShape2D" id=6]
 
@@ -952,130 +952,9 @@ damage = 0
 push_back_force = Vector2( 0, 0 )
 status = ""
 
-[node name="hitboxes" type="Node2D" parent="."]
-
-[node name="atk1_combo1" type="Area2D" parent="hitboxes"]
-
-editor/display_folded = true
-input/pickable = true
-shapes/0/shape = SubResource( 1 )
-shapes/0/transform = Matrix32( 1, 0, 0, 1, 75, 0 )
-shapes/0/trigger = false
-gravity_vec = Vector2( 0, 1 )
-gravity = 98.0
-linear_damp = 0.1
-angular_damp = 1.0
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="hitboxes/atk1_combo1"]
-
-transform/pos = Vector2( 75, 0 )
-shape = SubResource( 1 )
-trigger = false
-_update_shape_index = 0
-
-[node name="atk1_combo2" type="Area2D" parent="hitboxes"]
-
-editor/display_folded = true
-input/pickable = true
-shapes/0/shape = SubResource( 2 )
-shapes/0/transform = Matrix32( 1, 0, 0, 1, 75, 0 )
-shapes/0/trigger = false
-gravity_vec = Vector2( 0, 1 )
-gravity = 98.0
-linear_damp = 0.1
-angular_damp = 1.0
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="hitboxes/atk1_combo2"]
-
-transform/pos = Vector2( 75, 0 )
-shape = SubResource( 2 )
-trigger = false
-_update_shape_index = 0
-
-[node name="atk1_combo3" type="Area2D" parent="hitboxes"]
-
-editor/display_folded = true
-input/pickable = true
-shapes/0/shape = SubResource( 3 )
-shapes/0/transform = Matrix32( 1, 0, 0, 1, 110, -2 )
-shapes/0/trigger = false
-gravity_vec = Vector2( 0, 1 )
-gravity = 98.0
-linear_damp = 0.1
-angular_damp = 1.0
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="hitboxes/atk1_combo3"]
-
-transform/pos = Vector2( 110, -2 )
-shape = SubResource( 3 )
-trigger = false
-_update_shape_index = 0
-
-[node name="atk2_thrust" type="Area2D" parent="hitboxes"]
-
-transform/pos = Vector2( 80, 20 )
-input/pickable = true
-shapes/0/shape = SubResource( 4 )
-shapes/0/transform = Matrix32( 1, 0, 0, 1, 0, 0 )
-shapes/0/trigger = false
-gravity_vec = Vector2( 0, 1 )
-gravity = 98.0
-linear_damp = 0.1
-angular_damp = 1.0
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="hitboxes/atk2_thrust"]
-
-shape = SubResource( 4 )
-trigger = false
-_update_shape_index = 0
-
-[node name="atk1_air_spin" type="Area2D" parent="hitboxes"]
-
-editor/display_folded = true
-input/pickable = true
-shapes/0/shape = SubResource( 5 )
-shapes/0/transform = Matrix32( 1, 0, 0, 1, 0, 0 )
-shapes/0/trigger = false
-gravity_vec = Vector2( 0, 1 )
-gravity = 98.0
-linear_damp = 0.1
-angular_damp = 1.0
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="hitboxes/atk1_air_spin"]
-
-shape = SubResource( 5 )
-trigger = false
-_update_shape_index = 0
-
-[node name="atk2_air_downward_thrust" type="Area2D" parent="hitboxes"]
-
-editor/display_folded = true
-transform/pos = Vector2( 0, 98 )
-input/pickable = true
-shapes/0/shape = SubResource( 6 )
-shapes/0/transform = Matrix32( 1, 0, 0, 1, 0, 0 )
-shapes/0/trigger = false
-gravity_vec = Vector2( 0, 1 )
-gravity = 98.0
-linear_damp = 0.1
-angular_damp = 1.0
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="hitboxes/atk2_air_downward_thrust"]
-
-shape = SubResource( 6 )
-trigger = false
-_update_shape_index = 0
-
-[node name="spawn_pos_2dwt" type="Position2D" parent="hitboxes/atk2_air_downward_thrust"]
-
-transform/pos = Vector2( 0, 30 )
-
-[node name="spawn_pos" type="Position2D" parent="hitboxes"]
-
-transform/pos = Vector2( 0, 64 )
-
 [node name="testVisual" type="Control" parent="."]
 
+editor/display_folded = true
 anchor/left = 3
 anchor/top = 3
 anchor/right = 3
@@ -1184,6 +1063,130 @@ margin/right = 24.0
 margin/bottom = 165.0
 color = Color( 0, 1, 0.929688, 0.490196 )
 
+[node name="hitboxes" type="Node2D" parent="."]
+
+[node name="atk1_combo1" type="Area2D" parent="hitboxes"]
+
+editor/display_folded = true
+input/pickable = true
+shapes/0/shape = SubResource( 1 )
+shapes/0/transform = Matrix32( 1, 0, 0, 1, 75, 0 )
+shapes/0/trigger = false
+gravity_vec = Vector2( 0, 1 )
+gravity = 98.0
+linear_damp = 0.1
+angular_damp = 1.0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="hitboxes/atk1_combo1"]
+
+transform/pos = Vector2( 75, 0 )
+shape = SubResource( 1 )
+trigger = false
+_update_shape_index = 0
+
+[node name="atk1_combo2" type="Area2D" parent="hitboxes"]
+
+editor/display_folded = true
+input/pickable = true
+shapes/0/shape = SubResource( 2 )
+shapes/0/transform = Matrix32( 1, 0, 0, 1, 90, 0 )
+shapes/0/trigger = false
+gravity_vec = Vector2( 0, 1 )
+gravity = 98.0
+linear_damp = 0.1
+angular_damp = 1.0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="hitboxes/atk1_combo2"]
+
+transform/pos = Vector2( 90, 0 )
+shape = SubResource( 2 )
+trigger = false
+_update_shape_index = 0
+
+[node name="atk1_combo3" type="Area2D" parent="hitboxes"]
+
+editor/display_folded = true
+input/pickable = true
+shapes/0/shape = SubResource( 3 )
+shapes/0/transform = Matrix32( 1, 0, 0, 1, 110, -2 )
+shapes/0/trigger = false
+gravity_vec = Vector2( 0, 1 )
+gravity = 98.0
+linear_damp = 0.1
+angular_damp = 1.0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="hitboxes/atk1_combo3"]
+
+transform/pos = Vector2( 110, -2 )
+shape = SubResource( 3 )
+trigger = false
+_update_shape_index = 0
+
+[node name="atk2_thrust" type="Area2D" parent="hitboxes"]
+
+editor/display_folded = true
+transform/pos = Vector2( 80, 20 )
+input/pickable = true
+shapes/0/shape = SubResource( 4 )
+shapes/0/transform = Matrix32( 1, 0, 0, 1, 0, 0 )
+shapes/0/trigger = false
+gravity_vec = Vector2( 0, 1 )
+gravity = 98.0
+linear_damp = 0.1
+angular_damp = 1.0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="hitboxes/atk2_thrust"]
+
+shape = SubResource( 4 )
+trigger = false
+_update_shape_index = 0
+
+[node name="atk1_air_up" type="Area2D" parent="hitboxes"]
+
+editor/display_folded = true
+transform/pos = Vector2( 72.0224, -18.8366 )
+input/pickable = true
+shapes/0/shape = SubResource( 5 )
+shapes/0/transform = Matrix32( 1, 0, 0, 1, 0, 0 )
+shapes/0/trigger = false
+gravity_vec = Vector2( 0, 1 )
+gravity = 98.0
+linear_damp = 0.1
+angular_damp = 1.0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="hitboxes/atk1_air_up"]
+
+shape = SubResource( 5 )
+trigger = false
+_update_shape_index = 0
+
+[node name="atk2_air_downward_thrust" type="Area2D" parent="hitboxes"]
+
+editor/display_folded = true
+transform/pos = Vector2( 0, 98 )
+input/pickable = true
+shapes/0/shape = SubResource( 6 )
+shapes/0/transform = Matrix32( 1, 0, 0, 1, 0, 0 )
+shapes/0/trigger = false
+gravity_vec = Vector2( 0, 1 )
+gravity = 98.0
+linear_damp = 0.1
+angular_damp = 1.0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="hitboxes/atk2_air_downward_thrust"]
+
+shape = SubResource( 6 )
+trigger = false
+_update_shape_index = 0
+
+[node name="spawn_pos_2dwt" type="Position2D" parent="hitboxes/atk2_air_downward_thrust"]
+
+transform/pos = Vector2( 0, 30 )
+
+[node name="spawn_pos" type="Position2D" parent="hitboxes"]
+
+transform/pos = Vector2( 0, 64 )
+
 [node name="anim" type="AnimationPlayer" parent="."]
 
 playback/process_mode = 1
@@ -1213,7 +1216,7 @@ autoplay = ""
 
 [connection signal="area_enter" from="hitboxes/atk2_thrust" to="." method="_on_atk2_thrust_area_enter"]
 
-[connection signal="area_enter" from="hitboxes/atk1_air_spin" to="." method="_on_atk1_air_spin_area_enter"]
+[connection signal="area_enter" from="hitboxes/atk1_air_up" to="." method="_on_atk1_air_spin_area_enter"]
 
 [connection signal="area_enter" from="hitboxes/atk2_air_downward_thrust" to="." method="_on_atk2_air_downward_thrust_area_enter"]
 

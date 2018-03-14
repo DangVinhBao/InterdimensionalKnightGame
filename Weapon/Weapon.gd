@@ -59,3 +59,4 @@ func air_move(user):
 	else:
 		user.move(0, user.accerleration)
 	pass
+	

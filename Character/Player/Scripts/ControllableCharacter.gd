@@ -172,6 +172,7 @@ func state_attacking():
 	pass
 #state hurt
 func state_hurt():
+	play_loop_anim("hurt")
 	if ground_check():
 		state_machine.pop_state()
 		state_machine.push_state(STATE.GROUND)
