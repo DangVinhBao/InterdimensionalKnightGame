@@ -118,7 +118,6 @@ extents = Vector2( 33, 33 )
 
 [node name="block-1" type="Sprite" parent="."]
 
-editor/display_folded = true
 transform/pos = Vector2( 64, 64 )
 texture = ExtResource( 1 )
 
@@ -170,7 +169,6 @@ _update_shape_index = 0
 
 [node name="block-3" type="Sprite" parent="."]
 
-editor/display_folded = true
 transform/pos = Vector2( 320, 64 )
 texture = ExtResource( 3 )
 
@@ -1668,7 +1666,6 @@ _update_shape_index = 0
 
 [node name="box_3-9" type="Sprite" parent="."]
 
-editor/display_folded = true
 transform/pos = Vector2( 1920, 832 )
 texture = ExtResource( 72 )
 
@@ -1694,156 +1691,32 @@ _update_shape_index = 0
 
 [node name="tile_a-1" type="Sprite" parent="."]
 
-editor/display_folded = true
 transform/pos = Vector2( 512, 448 )
 texture = ExtResource( 73 )
-
-[node name="StaticBody2D" type="StaticBody2D" parent="tile_a-1"]
-
-input/pickable = false
-shapes/0/shape = SubResource( 6 )
-shapes/0/transform = Matrix32( 1, 0, 0, 1, 0, 0 )
-shapes/0/trigger = false
-collision/layers = 1
-collision/mask = 1
-constant_linear_velocity = Vector2( 0, 0 )
-constant_angular_velocity = 0.0
-friction = 1.0
-bounce = 0.0
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="tile_a-1/StaticBody2D"]
-
-visibility/visible = false
-shape = SubResource( 6 )
-trigger = false
-_update_shape_index = 0
 
 [node name="tile_a-2" type="Sprite" parent="."]
 
 transform/pos = Vector2( 384, 448 )
 texture = ExtResource( 74 )
 
-[node name="StaticBody2D" type="StaticBody2D" parent="tile_a-2"]
-
-input/pickable = false
-shapes/0/shape = SubResource( 6 )
-shapes/0/transform = Matrix32( 1, 0, 0, 1, 0, 0 )
-shapes/0/trigger = false
-collision/layers = 1
-collision/mask = 1
-constant_linear_velocity = Vector2( 0, 0 )
-constant_angular_velocity = 0.0
-friction = 1.0
-bounce = 0.0
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="tile_a-2/StaticBody2D"]
-
-visibility/visible = false
-shape = SubResource( 6 )
-trigger = false
-_update_shape_index = 0
-
 [node name="tile_a-3" type="Sprite" parent="."]
 
-transform/pos = Vector2( 256, 448 )
+transform/pos = Vector2( 254.64, 448 )
 texture = ExtResource( 75 )
-
-[node name="StaticBody2D" type="StaticBody2D" parent="tile_a-3"]
-
-input/pickable = false
-shapes/0/shape = SubResource( 6 )
-shapes/0/transform = Matrix32( 1, 0, 0, 1, 0, 0 )
-shapes/0/trigger = false
-collision/layers = 1
-collision/mask = 1
-constant_linear_velocity = Vector2( 0, 0 )
-constant_angular_velocity = 0.0
-friction = 1.0
-bounce = 0.0
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="tile_a-3/StaticBody2D"]
-
-visibility/visible = false
-shape = SubResource( 6 )
-trigger = false
-_update_shape_index = 0
 
 [node name="tile_b-1" type="Sprite" parent="."]
 
-editor/display_folded = true
 transform/pos = Vector2( 512, 576 )
 texture = ExtResource( 76 )
 
-[node name="StaticBody2D" type="StaticBody2D" parent="tile_b-1"]
-
-input/pickable = false
-shapes/0/shape = SubResource( 6 )
-shapes/0/transform = Matrix32( 1, 0, 0, 1, 0, 0 )
-shapes/0/trigger = false
-collision/layers = 1
-collision/mask = 1
-constant_linear_velocity = Vector2( 0, 0 )
-constant_angular_velocity = 0.0
-friction = 1.0
-bounce = 0.0
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="tile_b-1/StaticBody2D"]
-
-visibility/visible = false
-shape = SubResource( 6 )
-trigger = false
-_update_shape_index = 0
-
 [node name="tile_b-2" type="Sprite" parent="."]
 
-editor/display_folded = true
 transform/pos = Vector2( 384, 576 )
 texture = ExtResource( 77 )
 
-[node name="StaticBody2D" type="StaticBody2D" parent="tile_b-2"]
-
-input/pickable = false
-shapes/0/shape = SubResource( 6 )
-shapes/0/transform = Matrix32( 1, 0, 0, 1, 0, 0 )
-shapes/0/trigger = false
-collision/layers = 1
-collision/mask = 1
-constant_linear_velocity = Vector2( 0, 0 )
-constant_angular_velocity = 0.0
-friction = 1.0
-bounce = 0.0
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="tile_b-2/StaticBody2D"]
-
-visibility/visible = false
-shape = SubResource( 6 )
-trigger = false
-_update_shape_index = 0
-
 [node name="tile_b-3" type="Sprite" parent="."]
 
-editor/display_folded = true
 transform/pos = Vector2( 256, 576 )
 texture = ExtResource( 78 )
-
-[node name="StaticBody2D" type="StaticBody2D" parent="tile_b-3"]
-
-input/pickable = false
-shapes/0/shape = SubResource( 6 )
-shapes/0/transform = Matrix32( 1, 0, 0, 1, 0, 0 )
-shapes/0/trigger = false
-collision/layers = 1
-collision/mask = 1
-constant_linear_velocity = Vector2( 0, 0 )
-constant_angular_velocity = 0.0
-friction = 1.0
-bounce = 0.0
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="tile_b-3/StaticBody2D"]
-
-visibility/visible = false
-shape = SubResource( 6 )
-trigger = false
-_update_shape_index = 0
 
 
