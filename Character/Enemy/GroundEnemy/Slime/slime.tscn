@@ -300,6 +300,7 @@ radius = 30.0
 height = 30.0
 
 [node name="slime" type="RigidBody2D" groups=[
+"HURTBOX",
 "ENEMY",
 ]]
 
@@ -424,6 +425,7 @@ trigger = false
 _update_shape_index = 0
 
 [node name="hurtbox" type="Area2D" parent="." groups=[
+"HURTBOX",
 "ENEMY",
 ]]
 

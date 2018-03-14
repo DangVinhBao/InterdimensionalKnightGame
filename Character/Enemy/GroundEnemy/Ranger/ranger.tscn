@@ -507,6 +507,7 @@ transform/pos = Vector2( 80, -19 )
 
 [node name="hurtbox" type="Area2D" parent="." groups=[
 "ENEMY",
+"HURTBOX",
 ]]
 
 editor/display_folded = true

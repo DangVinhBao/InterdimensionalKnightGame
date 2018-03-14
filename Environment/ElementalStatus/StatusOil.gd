@@ -11,10 +11,10 @@ func combine(status, delta):
 			duration = status.duration
 		return self
 	elif status.type == Utils.STATUS.FIRE:
+		rev_start_effect()
 		status.duration = (duration*level + status.duration*status.level)/(level+status.level)
 		if status.level <= level:
 			status.level = level + 1
-		rev_start_effect()
 		status.start_effect()
 		return status
 	#no match type
@@ -30,16 +30,11 @@ func update(delta):
 	pass
 #effect happen when the status is added into array or combined 
 func start_effect():
-	print("Oil! Time: %d Level: %d" % [duration, level])
 	pass
 #reverse the effect happen at the start
 func rev_start_effect():
-	print("End Oil")
-	anim_status.stop()
-	anim_status.play("init")
 	pass
 
 #call when timer == tick_time
 func tick_effect():
-	print("duration: %f" % duration)
 	pass

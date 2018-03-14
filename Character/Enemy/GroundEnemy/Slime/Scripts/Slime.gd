@@ -59,16 +59,16 @@ func take_damage(damage, direction, push_back_force):
 
 # Deal damage to PLAYER on contact
 func _on_hurtbox_area_enter( area ):
-	if area.is_in_group("PLAYER") and not anim.get_current_animation() == STATE.ATTACK:
+	if area.is_in_group("PLAYER") and not area.is_in_group("PROP") and not anim.get_current_animation() == STATE.ATTACK:
 		var damage_dir = sign(target.get_pos().x - get_pos().x)
-		target.take_damage(CONTACT_DMG, damage_dir, KNOCKBACK_FORCE)
+		area.get_parent().take_damage(CONTACT_DMG, damage_dir, KNOCKBACK_FORCE)
 	pass # replace with function body
 
 # Deal damage to PLAYER while attacking
 func _on_hitbox_area_enter( area ):
 	if area.is_in_group("PLAYER"):
 		var damage_dir = direction
-		target.take_damage(ATTACK_DMG, damage_dir, KNOCKBACK_FORCE)
+		area.get_parent().take_damage(ATTACK_DMG, damage_dir, KNOCKBACK_FORCE)
 	pass # replace with function body
 
 ## Animation handling
@@ -213,6 +213,12 @@ class Attack extends "res://Utils/AttackState.gd":
 		HITBOX = weapon.hitbox
 		USER.run_anim()
 		pass
+##APPLY STATUS
+func apply_status(type, duration, level):
+	if type == Utils.STATUS.POISON:
+		return
+	.apply_status(type, duration, level)
+	pass
 
 func get_state():
 	var save_dict = {

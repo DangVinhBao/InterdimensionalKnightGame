@@ -8,6 +8,7 @@ var DamageLabel = preload("res://HUD/damage_label.tscn")
 ##onready
 onready var flip = get_node("flip")
 onready var anim = get_node("anim")
+onready var anim_status
 onready var hurtbox      = get_node("hurtbox")
 onready var physics_box  = get_node("physics_box")
 

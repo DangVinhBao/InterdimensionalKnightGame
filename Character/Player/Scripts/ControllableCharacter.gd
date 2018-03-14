@@ -29,7 +29,6 @@ var btn_atk2 = input_states.new("btn_atk2")
 var btn_use = input_states.new("btn_use")
 
 #weapon
-onready var anim_status = get_node("anim_status")
 onready var weapon = flip.get_node("DefaultSword")
 onready var interact_zone = flip.get_node("interact_zone")
 
@@ -37,6 +36,7 @@ onready var interact_zone = flip.get_node("interact_zone")
 var is_air_atk = false
 
 func _ready():
+	anim_status = get_node("anim_status")
 	state_machine.push_state(STATE.AIR)
 	pass
 
