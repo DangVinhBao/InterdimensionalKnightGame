@@ -112,7 +112,7 @@ extents = Vector2( 32, 32 )
 [sub_resource type="RectangleShape2D" id=6]
 
 custom_solver_bias = 0.0
-extents = Vector2( 32, 32 )
+extents = Vector2( 33, 33 )
 
 [node name="Node" type="Node"]
 
@@ -293,7 +293,6 @@ texture = ExtResource( 18 )
 
 [node name="block_1-2" type="Sprite" parent="."]
 
-editor/display_folded = true
 transform/pos = Vector2( 832, -64 )
 texture = ExtResource( 19 )
 
@@ -761,7 +760,6 @@ _update_shape_index = 0
 
 [node name="block_3-1" type="Sprite" parent="."]
 
-editor/display_folded = true
 transform/pos = Vector2( 704, 384 )
 texture = ExtResource( 37 )
 
@@ -1489,7 +1487,6 @@ _update_shape_index = 0
 
 [node name="box_3-2" type="Sprite" parent="."]
 
-editor/display_folded = true
 transform/pos = Vector2( 1792, 576 )
 texture = ExtResource( 65 )
 
@@ -1723,7 +1720,6 @@ _update_shape_index = 0
 
 [node name="tile_a-2" type="Sprite" parent="."]
 
-editor/display_folded = true
 transform/pos = Vector2( 384, 448 )
 texture = ExtResource( 74 )
 
@@ -1749,7 +1745,6 @@ _update_shape_index = 0
 
 [node name="tile_a-3" type="Sprite" parent="."]
 
-editor/display_folded = true
 transform/pos = Vector2( 256, 448 )
 texture = ExtResource( 75 )
 

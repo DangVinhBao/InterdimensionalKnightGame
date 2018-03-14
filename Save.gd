@@ -4,9 +4,7 @@ extends Node
 const SAVE_PATH = "res://save.json"
 
 func _ready():
-	var dir = Directory.new()
-	dir.remove("res://save.json")
-#	load_game()
+	load_game()
 		
 
 func save_game():
@@ -36,7 +34,7 @@ func load_game():
 	#convert the JSON back to a dictionary
 	var data = {}
 	data.parse_json(save_file.get_as_text())
-	
+
 	# The dict keys on the first level are paths to the nodes
 	for node_path in data.keys():
 		var node_data = data[node_path]
