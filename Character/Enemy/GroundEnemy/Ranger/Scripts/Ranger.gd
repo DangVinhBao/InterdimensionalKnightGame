@@ -2,16 +2,14 @@ extends "res://Character/Enemy/GroundEnemy/GroundEnemy.gd"
 
 onready var alert_sign = flip.get_node("alert_sign")
 onready var backoff_trail = flip.get_node("backoff_trail")
+onready var fire_position = flip.get_node("attack").get_node("fire_position")
 
-# preload classes
-var WanderBehavior  = preload("res://Character/Enemy/GroundEnemy/AIBehaviors/WanderBehavior.gd")
-var PursuitBehavior = preload("res://Character/Enemy/GroundEnemy/AIBehaviors/PursuitBehavior.gd")
 var ArrowScene      = preload("res://Character/Enemy/GroundEnemy/Ranger/arrow.tscn")
 
 export var PROJECTILE_SPEED = 600
 export var BACKOFF_COOLDOWN = 4
 export var BACKOFF_PROXIMITY = 150
-export var BACKOFF_DISTANCE = 1000
+export var BACKOFF_FORCE = 1800
 
 # STATES
 const STATE = { 
@@ -28,9 +26,7 @@ var backoff_timer = 0
 
 # READY
 func _ready():
-	set_process(true)
-	WanderBehavior  = WanderBehavior.new(self)
-	PursuitBehavior = PursuitBehavior.new(self)
+	backoff_trail.set_emitting(false)
 	state_machine.push_state(STATE.WANDER)
 	pass
 
@@ -53,13 +49,16 @@ func _draw():
 # Override
 # Take damage when being attacked
 func take_damage(damage, direction, push_back_force):
-	if not state_machine.get_current_state() == STATE.BACKOFF:
-		.take_damage(damage, direction, push_back_force)
-	
-	if not anim.get_current_animation() == STATE.ATTACK:
-		state_machine.pop_state()
+	if anim.get_current_animation() == STATE.ATTACK:
+		push_back_force = Vector2(0,0)
+	else:
+		## EXIT
+		# ANY STATE -> HURT
 		state_machine.push_state(STATE.HURT)
 		run_anim()
+	
+	if not state_machine.get_current_state() == STATE.BACKOFF:
+		.take_damage(damage, direction, push_back_force)
 	pass
 
 ## Animation handling
@@ -74,15 +73,13 @@ func run_anim():
 	elif current_state == STATE.PURSUIT:
 		play_loop_anim(STATE.PURSUIT)
 	elif current_state == STATE.HURT:
-		anim.stop()
 		anim.play(STATE.HURT)
 	elif current_state == STATE.ATTACK:
-		anim.stop()
 		anim.play(STATE.ATTACK)
 	elif current_state == STATE.ALERT:
 		anim.stop()
 	elif current_state == STATE.BACKOFF:
-		play_loop_anim(STATE.BACKOFF)
+		anim.play("backoff")
 	pass
 
 
@@ -96,7 +93,6 @@ func wander():
 	# WANDER -> ALERT
 	if player_dt.is_colliding():
 		WanderBehavior.exit()
-		state_machine.pop_state()
 		state_machine.push_state(STATE.ALERT)
 	pass
 
@@ -105,6 +101,7 @@ func wander():
 # ALERTING
 func alert():
 	run_anim()
+	direction = sign(target.get_pos().x - get_pos().x)
 	alert_sign.set_hidden(false)
 	var animation = alert_sign.get_node("anim")
 	if not animation.is_playing():
@@ -127,11 +124,10 @@ func pursuit():
 	
 	
 	## EXIT
-	# PURSUIT -> WANDER
+	# PURSUIT -> PREVIOUS STATE
 	if is_target_out_of_range(PURSUIT_RANGE, OS.get_window_size().y):
 		PursuitBehavior.exit()
 		state_machine.pop_state()
-		state_machine.push_state(STATE.WANDER)
 	
 	## EXIT
 	# PURSUIT -> ATTACK
@@ -151,11 +147,10 @@ func pursuit():
 # When SELF is take_damage
 func hurt():
 	## EXIT
-	# HURT -> PURSUIT
+	# HURT -> PREVIOUS STATE
 	if ground_check() and not anim.is_playing():
 		attack_timer = 0
 		state_machine.pop_state()
-		state_machine.push_state(STATE.PURSUIT)
 	pass
 
 
@@ -176,7 +171,7 @@ func attack():
 		idle()
 	
 	## EXIT
-	# ATTACK -> previous STATE
+	# ATTACK -> PREVIOUS STATE
 	if is_target_out_of_range(ATTACK_RANGE*1.5, OS.get_window_size().y) or not ground_check():
 		attack_timer = 0
 		state_machine.pop_state()
@@ -184,9 +179,8 @@ func attack():
 	## EXIT
 	# ATTACK -> BACKOFF
 	if backoff_timer <= 0 and get_pos().distance_to(target.get_pos()) <= BACKOFF_PROXIMITY:
-		if not anim.get_current_animation() == STATE.ATTACK:
-			attack_timer = 0
-			state_machine.push_state(STATE.BACKOFF)
+		attack_timer = 0
+		state_machine.push_state(STATE.BACKOFF)
 	pass
 
 func fire():
@@ -199,15 +193,24 @@ func fire():
 # BACKOFF STATE -----------------------------------------------------------------------------
 # Back off a step when PLAYER get too close
 func backoff():
+	var position = get_pos()
+	
 	if backoff_timer <= 0:
 		if ground_check():
 			run_anim()
 			backoff_trail.set_emitting(true)
-			set_axis_velocity(Vector2(BACKOFF_DISTANCE * -direction, -JUMP_FORCE))
+			set_axis_velocity(Vector2(BACKOFF_FORCE * -direction, 0))
 			backoff_timer = BACKOFF_COOLDOWN
-	elif get_linear_velocity().floor().y == 0:
+		else:
+			state_machine.pop_state()
+	elif get_linear_velocity().x == 0 or not bound_dt_1.is_colliding() or not bound_dt_2.is_colliding():
+		move(get_pos(), 0)
+		
 		while(backoff_trail.is_emitting()):
 			backoff_trail.set_emitting(false)
+		
+		## EXIT
+		# BACKOFF -> PREVIOUS STATE
 		state_machine.pop_state()
 	pass
 
