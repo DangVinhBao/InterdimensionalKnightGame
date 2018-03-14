@@ -50,6 +50,7 @@ func take_damage(damage, direction, push_back_force):
 	state_machine.push_state(STATE.HURT)
 	ground_detector.set_enabled(false)
 	apply_status(Utils.STATUS.INVULNERABLE, INVULNERABLE_TIME, 0)
+	
 	pass
 #move function
 func move(to_speed, acc): 
