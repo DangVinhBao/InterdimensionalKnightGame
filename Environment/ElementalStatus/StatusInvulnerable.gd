@@ -9,7 +9,7 @@ func combine(status, delta):
 		#extent duration
 		if duration < status.duration:
 			duration = status.duration
-		return true
+		return self
 		pass
 	#no match type
 	return false
