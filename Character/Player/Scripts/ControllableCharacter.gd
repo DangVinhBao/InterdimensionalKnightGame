@@ -50,7 +50,6 @@ func take_damage(damage, direction, push_back_force):
 	state_machine.push_state(STATE.HURT)
 	ground_detector.set_enabled(false)
 	apply_status(Utils.STATUS.INVULNERABLE, INVULNERABLE_TIME, 0)
-	
 	pass
 #move function
 func move(to_speed, acc): 
@@ -172,7 +171,6 @@ func state_attacking():
 	pass
 #state hurt
 func state_hurt():
-	play_loop_anim("hurt")
 	if ground_check():
 		state_machine.pop_state()
 		state_machine.push_state(STATE.GROUND)
@@ -186,20 +184,3 @@ func _on_oneway_leave_body_enter( body ):
 	pass # replace with function body
 
 
-func get_state():
-	var save_dict = {
-		pos={
-			x=get_pos().x,
-			y=get_pos().y
-		},
-#		max_health=max_health
-	}
-	return save_dict
-
-#load game
-func load_state(data):
-	for attribute in data:
-		if attribute == 'pos':
-			set_pos(Vector2(data['pos']['x'], data['pos']['y']))
-		else:
-			set(attribute, data[attribute])
